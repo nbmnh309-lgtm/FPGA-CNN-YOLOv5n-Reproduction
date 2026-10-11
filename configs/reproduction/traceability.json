@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "requirements": [
+    {
+      "id": "A-ANALYSIS",
+      "phase": "A",
+      "paper_source": "§1–5; pp.1–25",
+      "requirement": "Phân tích PDF và kiểm kê",
+      "code": "docs/reproduction/paper_analysis.md",
+      "test": "tests/python/test_phase_a.py",
+      "result": "reports/phase_a_validation.json",
+      "status": "implemented",
+      "result_kind": "measured"
+    },
+    {
+      "id": "B-FP32",
+      "phase": "B",
+      "paper_source": "§4.1 p.18",
+      "requirement": "YOLOv5n graph/weights/preprocessing",
+      "code": "models/yolov5n/infer.py",
+      "test": "tests/python/test_yolov5n.py",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "B-EVAL",
+      "phase": "B",
+      "paper_source": "§4.3.3 Table 3",
+      "requirement": "VOC accuracy và CUDA benchmark",
+      "code": "benchmarks/fp32.py",
+      "test": "tests/python/test_benchmark.py",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "C-INT8",
+      "phase": "C",
+      "paper_source": "§2.3 Eq.1–4 pp.5–6",
+      "requirement": "Affine calibration/quantization",
+      "code": "quantization/int8/affine.py",
+      "test": "tests/python/test_int8.py",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "D-MQDA",
+      "phase": "D",
+      "paper_source": "§3.2.3–4 pp.14–15; §4.3.3",
+      "requirement": "Add/Cat domain alignment và ablation",
+      "code": "architecture/mqda/reference.py",
+      "test": "tests/python/test_mqda.py",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "E-DMP",
+      "phase": "E",
+      "paper_source": "§3.2.1 p.13; §4.3.1 p.19 Fig.7",
+      "requirement": "Shared-activation DMP và sign correction",
+      "code": "architecture/dual_multiply_packing/reference.py",
+      "test": "tests/python/test_dmp.py",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "E-RTL",
+      "phase": "E",
+      "paper_source": "§3.2.1; §4.3.1",
+      "requirement": "DMP RTL latency/valid và arithmetic",
+      "code": "rtl/dual_multiply_packing/dmp.sv",
+      "test": "testbench/unit/tb_dmp.sv",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "F-BUFFER",
+      "phase": "F",
+      "paper_source": "§2.4; §3.2.1 Fig.4; §4.3.2",
+      "requirement": "Ping-pong overlap mô hình chu kỳ",
+      "code": "architecture/ping_pong_buffer/cycle_model.py",
+      "test": "tests/python/test_ping_pong.py",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "F-RTL",
+      "phase": "F",
+      "paper_source": "§3.2.1; §3.2.6–7",
+      "requirement": "Ownership/stalls/reset hai bank RTL",
+      "code": "rtl/ping_pong_buffer/buffer.sv",
+      "test": "testbench/unit/tb_buffer.sv",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "G-CONV33",
+      "phase": "G",
+      "paper_source": "§3.2.1 Table 1 Fig.3–7",
+      "requirement": "Conv33 stride/padding/partial sum",
+      "code": "rtl/common/conv33.sv",
+      "test": "testbench/unit/tb_conv33.sv",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "G-CONV11",
+      "phase": "G",
+      "paper_source": "§3.2.2 Table 1",
+      "requirement": "Conv11 và optional activation",
+      "code": "rtl/common/conv11.sv",
+      "test": "testbench/unit/tb_conv11.sv",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "G-ADD",
+      "phase": "G",
+      "paper_source": "§3.2.3",
+      "requirement": "Add RTL 16 lanes, pipeline MQDA",
+      "code": "rtl/mqda/add.sv",
+      "test": "testbench/unit/tb_add.sv",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "G-CAT",
+      "phase": "G",
+      "paper_source": "§3.2.4",
+      "requirement": "Cat RTL ordering/domain",
+      "code": "rtl/mqda/cat.sv",
+      "test": "testbench/unit/tb_cat.sv",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "G-SPPF",
+      "phase": "G",
+      "paper_source": "§3.2.5",
+      "requirement": "Ba maxpool 5×5 và concat",
+      "code": "rtl/common/sppf.sv",
+      "test": "testbench/unit/tb_sppf.sv",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "G-UPSAMPLE",
+      "phase": "G",
+      "paper_source": "§3.2.6",
+      "requirement": "Nearest ×2 cả H/W",
+      "code": "rtl/common/upsample.sv",
+      "test": "testbench/unit/tb_upsample.sv",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "G-FOCUS",
+      "phase": "G",
+      "paper_source": "§3.2.7 Fig.8",
+      "requirement": "Parity slice và padded channel layout",
+      "code": "rtl/common/focus.sv",
+      "test": "testbench/unit/tb_focus.sv",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "H-INTEGRATION",
+      "phase": "H",
+      "paper_source": "§3.1 Fig.2",
+      "requirement": "NPU instruction/DDR/DMA behavioral integration",
+      "code": "rtl/top/npu.sv",
+      "test": "testbench/integration/tb_npu.sv",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    },
+    {
+      "id": "I-RESULTS",
+      "phase": "I",
+      "paper_source": "§4.2–4.6 Tables 2–6",
+      "requirement": "Benchmark/resources/power so cùng phạm vi",
+      "code": "benchmarks/summarize.py",
+      "test": "tests/python/test_results.py",
+      "result": null,
+      "status": "planned",
+      "result_kind": null
+    }
+  ]
+}

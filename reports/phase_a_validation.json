@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "result_kind": "measured",
+  "scope": "Phase A document/tooling validation only; no CNN or RTL execution",
+  "trace_requirements": 18,
+  "paper_metrics": 18,
+  "status": "passed"
+}

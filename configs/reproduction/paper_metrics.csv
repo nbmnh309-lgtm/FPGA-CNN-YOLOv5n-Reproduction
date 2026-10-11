@@ -1,0 +1,19 @@
+metric,value,unit,source,result_kind,notes
+map_fp32,71.54,percent,Table 3,paper_reported,AP definition unknown
+map_int8_mqda,68.79,percent,Table 3,paper_reported,AP definition unknown
+map_int8_no_mqda,68.26,percent,Table 3,paper_reported,AP definition unknown
+npu_latency,24.617,ms,Tables 4–5,paper_reported,includes DMA and scheduling
+host_postprocess,12.069,ms,Tables 4–5,paper_reported,host sigmoid/decode/NMS boundary
+end_to_end,36.686,ms,Tables 4–5,paper_reported,single frame
+end_to_end_fps,27.2,FPS,Table 4,paper_reported,no inter-frame overlap
+npu_fps,40.62,FPS,Table 4,paper_reported,FPGA-only
+throughput,182.8,GOPS,Table 4,paper_reported,operation convention unresolved
+serialized_latency,31.854,ms,§4.3.2,paper_reported,FPGA-side baseline
+serialized_throughput,141.3,GOPS,§4.3.2,paper_reported,denominator unresolved
+power,8.536,W,§4.5,paper_reported,"Vivado power estimate, not physical measurement"
+energy_efficiency,21.42,GOPS/W,§4.5,paper_reported,paper throughput / estimated power
+lut,128535,count,Table 2,paper_reported,available 277400
+lutram,4812,count,Table 2,paper_reported,available 108200
+ff,176588,count,Table 2,paper_reported,available 554800
+bram,273.5,blocks,Table 2,paper_reported,available 755
+dsp,752,count,Table 2,paper_reported,available 2020
