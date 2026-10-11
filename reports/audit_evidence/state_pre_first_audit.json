@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "stages": {
+    "python_tests": {
+      "status": "PASS",
+      "signature": "bf5fa1378845159d37e3d72b8a9aef2aee8a63bb938a05b3d2b4a21a059b9c94",
+      "started": "2026-10-11T19:12:10.780914+07:00",
+      "command": [
+        "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "tests/python",
+        "-q",
+        "--junitxml=outputs/python_tests.xml"
+      ],
+      "artifacts": {
+        "outputs/python_tests.xml": "0b459d86fb5378f5386f3eda01c97373dd0fb7816edd40076fa900fb73267065"
+      },
+      "ended": "2026-10-11T19:12:14.724870+07:00",
+      "log": "outputs\\logs\\python_tests_20261011_191210_783649.log"
+    },
+    "inputs": {
+      "status": "PASS",
+      "signature": "7327b7633741409880ede716b3c6e7a8d58e760ec7e5799e5a3daa1d21e84c3b",
+      "started": "2026-10-11T18:59:59.861780+07:00",
+      "command": [
+        "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "windows_runner.prepare_inputs"
+      ],
+      "artifacts": {
+        "outputs/inputs.json": "1a0ef74e3d9adb328a77dfc0d8d47b8919037e5c4431de6ee52e103a5ada7987"
+      },
+      "ended": "2026-10-11T19:00:00.072673+07:00",
+      "log": "outputs\\logs\\inputs_20261011_185959.log"
+    },
+    "rtl": {
+      "status": "PASS",
+      "signature": "3b0a9bed2855206bee11e0b2cb1f33f1552a6d24e3189b3c92f76c231654df37",
+      "started": "2026-10-11T19:10:09.412228+07:00",
+      "command": [
+        "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "windows_runner.rtl_verify"
+      ],
+      "artifacts": {
+        "outputs/rtl/results.json": "07eb29fd9d692d799caeb6ac9275ab3d13bfd69372e4538e47e5fc5493f31215",
+        "outputs/rtl/commands.log": "fcf13ae74899cbb42764624de177f640cf40842e10cb08cdbe7cbd325d3cfab3"
+      },
+      "ended": "2026-10-11T19:11:03.699542+07:00",
+      "log": "outputs\\logs\\rtl_20261011_191009.log"
+    },
+    "gpu_experiments": {
+      "status": "PASS",
+      "signature": "76b030c0e9c795b2eff24fe994958aa681244397c4ba05d2296aaff54f48c927",
+      "started": "2026-10-11T19:06:15.072453+07:00",
+      "command": [
+        "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "benchmarks.local_experiments"
+      ],
+      "artifacts": {
+        "outputs/experiments/results.json": "70405f827981c34a13e67e60740bf9a2bf4af1467009c9e78dab7c8faf2ce5c7",
+        "outputs/experiments/fp32_samples.csv": "3a614049f846d7cb97bbad3b0e5f70ae1af8b9dcf7f78f1036ba54da65fe9a96",
+        "outputs/experiments/layer_errors.csv": "afa916d8852680b5f3c5db88b3eeccfb658e5a8859d06f15f6546d9bcbdeed55",
+        "outputs/experiments/calibration.json": "19849a3cc6e9819c0b56d533271425a8670f0e4683738881094c87b7b1bc9cf6",
+        "outputs/experiments/quantized_weights.pt": "184afde33875203f26f09e2d2b96eb122cf813c1bd9c9f197b4a41b037dcbf20"
+      },
+      "ended": "2026-10-11T19:06:34.603518+07:00",
+      "log": "outputs\\logs\\gpu_experiments_20261011_190615.log"
+    },
+    "dmp_synthesis_z020": {
+      "status": "PASS",
+      "signature": "96506a204cf843b6bc2a453265381f717e72af1953c026504a204141880fb633",
+      "started": "2026-10-11T19:00:38.848060+07:00",
+      "command": [
+        "C:\\Xilinx\\Vivado\\2020.2\\bin\\vivado.bat",
+        "-mode",
+        "batch",
+        "-source",
+        "scripts/synth_dmp.tcl",
+        "-tclargs",
+        "xc7z020clg484-1",
+        "-log",
+        "outputs/rtl/synthesis_z020_runner.log",
+        "-journal",
+        "outputs/rtl/synthesis_z020_runner.jou"
+      ],
+      "artifacts": {
+        "outputs/rtl/dmp_synthesis.json": "1cff70f9ea511ad4773b0a93f886d4317968145d24dd38d89ea691d10af8da00",
+        "outputs/rtl/dmp_utilization.rpt": "7851af2b49441fe1ba68dab3b586f86b6cf5aa2c6b436c3467abe1d2fb89d959"
+      },
+      "ended": "2026-10-11T19:01:10.609737+07:00",
+      "log": "outputs\\logs\\dmp_synthesis_z020_20261011_190038.log"
+    },
+    "report": {
+      "status": "PASS",
+      "signature": "c42a8df9e8d57eabb4b72ee021b393ea40286e13d84d3dde70209c5460968688",
+      "started": "2026-10-11T19:12:14.884098+07:00",
+      "command": [
+        "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "benchmarks.summarize"
+      ],
+      "artifacts": {
+        "reports/LOCAL_REPRODUCTION_VI.md": "7ab922fab70f308d532213b6ed1b752d44fcebf65434cb7223529ed230d3f2d5",
+        "reports/local_results.json": "fb7141ae758b8390cd7046be3da91c15e8f23c99786ceb52e1dc116a683f1c6d",
+        "docs/PROGRESS.md": "8133aaabafe5372b11084a8704188868e12d3111dffc2f089b4380b3e5ad296c",
+        "docs/REPRODUCTION_MATRIX.md": "aa63db304cce40724d6f8240aedc3f1e3906ae39d0eac45495b4f6ef9e9dd29d"
+      },
+      "ended": "2026-10-11T19:12:16.009432+07:00",
+      "log": "outputs\\logs\\report_20261011_191214_886106.log"
+    }
+  },
+  "updated": "2026-10-11T19:12:10.777147+07:00",
+  "environment": "outputs/environment.json",
+  "scope": "Local maximum feasible method reproduction; physical FPGA/VOC paper replication incomplete",
+  "last_run": "2026-10-11T19:12:16.011437+07:00",
+  "last_exit_code": 0
+}

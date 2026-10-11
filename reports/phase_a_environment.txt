@@ -1,0 +1,20 @@
+Python: 3.12.14
+pip: 26.2.1
+numpy: 2.3.5
+PyYAML: 6.0.3
+pytest: CHƯA CÓ
+torch: CHƯA CÓ
+torchvision: CHƯA CÓ
+onnx: CHƯA CÓ
+opencv-python-headless: CHƯA CÓ
+git: git version 2.52.0 (exit=0)
+iverilog: CHƯA CÓ
+vvp: CHƯA CÓ
+verilator: CHƯA CÓ
+make: GNU Make 4.4.1 (exit=0)
+g++: g++ (Debian 14.2.0-19) 14.2.0 (exit=0)
+cmake: CHƯA CÓ
+yosys: CHƯA CÓ
+vivado: CHƯA CÓ
+vitis_hls: CHƯA CÓ
+Đây là báo cáo kiểm kê, không phải kiểm thử CNN/RTL. Thiếu công cụ không làm lệnh này thất bại.

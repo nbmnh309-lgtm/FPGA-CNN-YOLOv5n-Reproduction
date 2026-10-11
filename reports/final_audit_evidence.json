@@ -1,0 +1,957 @@
+{
+  "date_utc": "2026-10-11T12:21:36.101649+00:00",
+  "cwd": "C:\\Users\\azzmi\\FPGA-CNN-Temp",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
+  "source_head_before_audit_commit": "6b7e414faf6d17b3a19d9559be88539359e0229c",
+  "packages": {
+    "pytest": "9.1.1",
+    "numpy": "2.5.2",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "opencv-python": "5.0.0.93",
+    "PyYAML": "6.0.3",
+    "matplotlib": "3.11.2"
+  },
+  "retained_files": [
+    {
+      "path": "reports/audit_evidence/state_before.json",
+      "sha256": "b0f29c71185fe43e2842a593965f5eb5ce99e49ea54032865a2b285aa0caf13b",
+      "bytes": 5301
+    },
+    {
+      "path": "reports/audit_evidence/python_tests_before.xml",
+      "sha256": "8871c90582aa71ee8087bc3cda815c45cc75417cfc043dc7d2e714e4ef9c85d9",
+      "bytes": 2988
+    },
+    {
+      "path": "reports/audit_evidence/outputs__rtl__results.json",
+      "sha256": "07eb29fd9d692d799caeb6ac9275ab3d13bfd69372e4538e47e5fc5493f31215",
+      "bytes": 11101
+    },
+    {
+      "path": "reports/audit_evidence/outputs__rtl__commands.log",
+      "sha256": "fcf13ae74899cbb42764624de177f640cf40842e10cb08cdbe7cbd325d3cfab3",
+      "bytes": 55269
+    },
+    {
+      "path": "reports/audit_evidence/outputs__rtl__dmp_utilization.rpt",
+      "sha256": "7851af2b49441fe1ba68dab3b586f86b6cf5aa2c6b436c3467abe1d2fb89d959",
+      "bytes": 6707
+    },
+    {
+      "path": "reports/audit_evidence/outputs__rtl__synthesis.log",
+      "sha256": "c98259348e8b8c4ded2ab6f30c241cddd9ea8b9acaedc33596615e93637bf999",
+      "bytes": 2279
+    },
+    {
+      "path": "reports/audit_evidence/outputs__rtl__dmp_synth_timing.rpt",
+      "sha256": "84fc852de324b04f4defa40724e84aae875d62c13d5a7e5be3162fd84dde0bc6",
+      "bytes": 16129
+    },
+    {
+      "path": "reports/audit_evidence/outputs__experiments__results.json",
+      "sha256": "70405f827981c34a13e67e60740bf9a2bf4af1467009c9e78dab7c8faf2ce5c7",
+      "bytes": 5587
+    },
+    {
+      "path": "reports/audit_evidence/outputs__experiments__calibration.json",
+      "sha256": "19849a3cc6e9819c0b56d533271425a8670f0e4683738881094c87b7b1bc9cf6",
+      "bytes": 25859
+    },
+    {
+      "path": "reports/audit_evidence/outputs__environment.json",
+      "sha256": "eb8923ccb8bc889f7ed295cf3012a5de35645bcb22b75f29c0cd6cd23f30edf4",
+      "bytes": 2047
+    },
+    {
+      "path": "reports/audit_evidence/python_tests_after.xml",
+      "sha256": "8871c90582aa71ee8087bc3cda815c45cc75417cfc043dc7d2e714e4ef9c85d9",
+      "bytes": 2988
+    },
+    {
+      "path": "reports/audit_evidence/python_tests_after.log",
+      "sha256": "8362f72128b937ce040952a3350d95ed315271525a2185ce3e0ba6aa7f7bb2f0",
+      "bytes": 118
+    }
+  ],
+  "stages_before": {
+    "python_tests": {
+      "status": "PASS",
+      "artifact_hashes": {
+        "outputs/python_tests.xml": "8871c90582aa71ee8087bc3cda815c45cc75417cfc043dc7d2e714e4ef9c85d9"
+      },
+      "log": {
+        "path": "reports/audit_evidence/python_tests_before.log",
+        "sha256": "8362f72128b937ce040952a3350d95ed315271525a2185ce3e0ba6aa7f7bb2f0",
+        "bytes": 118
+      }
+    },
+    "inputs": {
+      "status": "PASS",
+      "artifact_hashes": {
+        "outputs/inputs.json": "1a0ef74e3d9adb328a77dfc0d8d47b8919037e5c4431de6ee52e103a5ada7987"
+      },
+      "log": {
+        "path": "reports/audit_evidence/inputs_before.log",
+        "sha256": "ff20b1e8c6c76b89056bd4c7b67be50845352843db1d30f37254fe5df6b1eb9b",
+        "bytes": 548
+      }
+    },
+    "rtl": {
+      "status": "PASS",
+      "artifact_hashes": {
+        "outputs/rtl/results.json": "07eb29fd9d692d799caeb6ac9275ab3d13bfd69372e4538e47e5fc5493f31215",
+        "outputs/rtl/commands.log": "fcf13ae74899cbb42764624de177f640cf40842e10cb08cdbe7cbd325d3cfab3"
+      },
+      "log": {
+        "path": "reports/audit_evidence/rtl_before.log",
+        "sha256": "a6aebf647b455b3db42c23ac15afaaae22650c91fc08835e8cb97b7044d940c0",
+        "bytes": 2563
+      }
+    },
+    "gpu_experiments": {
+      "status": "PASS",
+      "artifact_hashes": {
+        "outputs/experiments/results.json": "70405f827981c34a13e67e60740bf9a2bf4af1467009c9e78dab7c8faf2ce5c7",
+        "outputs/experiments/fp32_samples.csv": "3a614049f846d7cb97bbad3b0e5f70ae1af8b9dcf7f78f1036ba54da65fe9a96",
+        "outputs/experiments/layer_errors.csv": "afa916d8852680b5f3c5db88b3eeccfb658e5a8859d06f15f6546d9bcbdeed55",
+        "outputs/experiments/calibration.json": "19849a3cc6e9819c0b56d533271425a8670f0e4683738881094c87b7b1bc9cf6",
+        "outputs/experiments/quantized_weights.pt": "184afde33875203f26f09e2d2b96eb122cf813c1bd9c9f197b4a41b037dcbf20"
+      },
+      "log": {
+        "path": "reports/audit_evidence/gpu_experiments_before.log",
+        "sha256": "991d278cc152c8b3167268557c67f2118dae54aa1dab61d0aac406854c04f1fd",
+        "bytes": 8413
+      }
+    },
+    "dmp_synthesis_z020": {
+      "status": "PASS",
+      "artifact_hashes": {
+        "outputs/rtl/dmp_synthesis.json": "1cff70f9ea511ad4773b0a93f886d4317968145d24dd38d89ea691d10af8da00",
+        "outputs/rtl/dmp_utilization.rpt": "7851af2b49441fe1ba68dab3b586f86b6cf5aa2c6b436c3467abe1d2fb89d959"
+      },
+      "log": {
+        "path": "reports/audit_evidence/dmp_synthesis_z020_before.log",
+        "sha256": "2881d4ffd2270340e3fc8185255b5b7e4d6ce85db5170234e3f40ad343a9d414",
+        "bytes": 14667
+      }
+    },
+    "report": {
+      "status": "PASS",
+      "artifact_hashes": {
+        "reports/LOCAL_REPRODUCTION_VI.md": "d32f9e78d3d19a343b208e50e4d7cdffdc133dbe2166fa2e2928bf523dc5580e",
+        "reports/local_results.json": "d0bfd091d3bd9effaaac1dff3b9df7201236728f4f0151b58035e6e31917e86e",
+        "docs/PROGRESS.md": "6fcd3bd6a0018554c545f5f22c53b22544cb531442bc0012e50380377e24ea28",
+        "docs/REPRODUCTION_MATRIX.md": "6eec8b9e4759f16f1e4f21effbc8fdb0e034262ce3dfadc322e2685b59bfd9bf"
+      },
+      "log": {
+        "path": "reports/audit_evidence/report_before.log",
+        "sha256": "63c06d13c098f2d99aef5748532081ff8d8a03fa4a6cfa900721bd2a464e1bc5",
+        "bytes": 74
+      }
+    }
+  },
+  "junit_before": {
+    "suite_counter": 26,
+    "testcase_elements": 24,
+    "extra_subtest_events": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "tests.python.test_phase_a.TraceabilityTests.test_duplicate_ids_rejected",
+      "tests.python.test_phase_a.TraceabilityTests.test_future_module_cannot_claim_a_pass",
+      "tests.python.test_phase_a.TraceabilityTests.test_implemented_cannot_claim_missing_evidence",
+      "tests.python.test_phase_a.TraceabilityTests.test_invalid_phase_type_rejected",
+      "tests.python.test_phase_a.TraceabilityTests.test_missing_implementation_rejected",
+      "tests.python.test_phase_a.TraceabilityTests.test_missing_phase_rejected",
+      "tests.python.test_phase_a.TraceabilityTests.test_paper_values_cannot_be_relabelled_as_measurements",
+      "tests.python.test_phase_a.TraceabilityTests.test_path_escape_rejected",
+      "tests.python.test_phase_a.TraceabilityTests.test_real_trace_and_metrics",
+      "tests.python.test_phase_a.ManifestTests.test_file_hash_without_disclosing_content",
+      "tests.python.test_phase_a.ManifestTests.test_missing_input_fails",
+      "tests.python.test_reference.test_quant_boundaries_and_rounding",
+      "tests.python.test_reference.test_mqda_random_and_saturation",
+      "tests.python.test_reference.test_q16_negative_ties",
+      "tests.python.test_reference.test_dmp_all_weights_and_all_activation_codes",
+      "tests.python.test_reference.test_conv_against_torch[1-1-0]",
+      "tests.python.test_reference.test_conv_against_torch[3-1-1]",
+      "tests.python.test_reference.test_conv_against_torch[3-2-1]",
+      "tests.python.test_reference.test_spatial_ops_against_torch_and_focus_order",
+      "tests.python.test_reference.test_bank_ownership_and_overlap",
+      "tests.python.test_reference.test_instruction_memory_integration",
+      "tests.python.test_runner.test_corrupt_and_missing_artifact_cannot_skip",
+      "tests.python.test_runner.test_signature_changes_with_source",
+      "tests.python.test_runner.test_failed_stage_is_recorded_and_can_recover"
+    ]
+  },
+  "benchmark": {
+    "samples": 384,
+    "unique_images": 128,
+    "repeats": 3,
+    "statistics_recomputed": {
+      "preprocess_ms": {
+        "count": 384,
+        "mean_ms": 0.9457036459252777,
+        "median_ms": 0.8450000004813774,
+        "p95_ms": 1.4200449975760416,
+        "std_ms": 0.28305449122456017,
+        "fps_from_mean": 1057.4137091557882
+      },
+      "inference_ms": {
+        "count": 384,
+        "mean_ms": 5.617755468724302,
+        "median_ms": 5.474600000525243,
+        "p95_ms": 6.673309999496267,
+        "std_ms": 0.4964731557968308,
+        "fps_from_mean": 178.0070360070484
+      },
+      "nms_ms": {
+        "count": 384,
+        "mean_ms": 1.137684635362272,
+        "median_ms": 0.9809000021050451,
+        "p95_ms": 1.3554150003983518,
+        "std_ms": 2.247656845279094,
+        "fps_from_mean": 878.978206189425
+      },
+      "end_to_end_ms": {
+        "count": 384,
+        "mean_ms": 7.701143750011852,
+        "median_ms": 7.39025000075344,
+        "p95_ms": 9.088975001395738,
+        "std_ms": 2.338513837092437,
+        "fps_from_mean": 129.8508419607751
+      }
+    },
+    "accuracy": {
+      "fp32": {
+        "precision": 0.6471223179809045,
+        "recall": 0.46706450968754226,
+        "map50": 0.5461647051569388,
+        "map50_95": 0.34896253675021655,
+        "scope": "COCO128 sanity, not independent held-out VOC validation",
+        "result_kind": "MEASURED"
+      },
+      "mqda": {
+        "precision": 0.6389451740418818,
+        "recall": 0.4438139644727149,
+        "map50": 0.5257289664579589,
+        "map50_95": 0.3256615455671317,
+        "scope": "COCO128 sanity, not independent held-out VOC validation",
+        "result_kind": "SIMULATED"
+      },
+      "no_mqda": {
+        "precision": 0.0033583149439416946,
+        "recall": 0.08635950600621196,
+        "map50": 0.004829173495706609,
+        "map50_95": 0.00201509561219702,
+        "scope": "COCO128 sanity, not independent held-out VOC validation",
+        "result_kind": "SIMULATED"
+      }
+    },
+    "cpu_int8": [
+      {
+        "kernel": 3,
+        "backend": "onednn",
+        "shape": [
+          1,
+          16,
+          32,
+          32
+        ],
+        "cout": 8,
+        "mse": 7.305297003767919e-06,
+        "timings": {
+          "FP32": {
+            "count": 200,
+            "mean_ms": 0.03835800003798795,
+            "median_ms": 0.03730000025825575,
+            "p95_ms": 0.04350500021246262,
+            "std_ms": 0.0032522662936932635,
+            "fps_from_mean": 26070.18090123696
+          },
+          "INT8_onednn": {
+            "count": 200,
+            "mean_ms": 0.06601899984161719,
+            "median_ms": 0.06470000153058209,
+            "p95_ms": 0.07521500137954718,
+            "std_ms": 0.004650434258369455,
+            "fps_from_mean": 15147.154643345839
+          }
+        },
+        "result_kind": "MEASURED",
+        "scope": "isolated CPU Conv2d; excludes input quantization/output dequantization; not complete network"
+      },
+      {
+        "kernel": 1,
+        "backend": "onednn",
+        "shape": [
+          1,
+          16,
+          32,
+          32
+        ],
+        "cout": 16,
+        "mse": 9.259513717552181e-06,
+        "timings": {
+          "FP32": {
+            "count": 200,
+            "mean_ms": 0.017718499948387034,
+            "median_ms": 0.01669999983278103,
+            "p95_ms": 0.020200001017656177,
+            "std_ms": 0.005058597459281696,
+            "fps_from_mean": 56438.186241100666
+          },
+          "INT8_onednn": {
+            "count": 200,
+            "mean_ms": 0.06861149997348548,
+            "median_ms": 0.06314999882306438,
+            "p95_ms": 0.09783000168681606,
+            "std_ms": 0.02038885517625622,
+            "fps_from_mean": 14574.816180763346
+          }
+        },
+        "result_kind": "MEASURED",
+        "scope": "isolated CPU Conv2d; excludes input quantization/output dequantization; not complete network"
+      }
+    ],
+    "raw_cpu_samples_available": false
+  },
+  "checkpoint": {
+    "path": "C:\\Users\\azzmi\\FPGA-CNN-Temp\\yolov5n.pt",
+    "sha256": "4f180cf23ba0717ada0badd6c685026d73d48f184d00fc159c2641284b2ac0a3",
+    "bytes": 4062133
+  },
+  "dataset_archive": {
+    "path": "C:\\Users\\azzmi\\FPGA-CNN-Temp\\data\\downloads\\coco128.zip",
+    "sha256": "61e5e3028863d8ffc3b81d6a514603954889f0edd5e4b44c4ce60b2da99aeb8e",
+    "bytes": 6983030
+  },
+  "upstream_commit": "f9578796b8a64889aa9e66dc06914d19f40d338e",
+  "extracted_dataset_files_matching_archive": 257,
+  "rtl": {
+    "result_kind": "SIMULATED",
+    "simulator": "C:\\Xilinx\\Vivado\\2020.2\\bin",
+    "dmp_vectors": 544288,
+    "operator_cases": [
+      {
+        "case": 0,
+        "op": 6,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          3,
+          4,
+          12
+        ],
+        "cycles": 144
+      },
+      {
+        "case": 1,
+        "op": 5,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          12,
+          16,
+          3
+        ],
+        "cycles": 576
+      },
+      {
+        "case": 2,
+        "op": 4,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          6,
+          8,
+          12
+        ],
+        "cycles": 576
+      },
+      {
+        "case": 3,
+        "op": 2,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          6,
+          8,
+          3
+        ],
+        "cycles": 144
+      },
+      {
+        "case": 4,
+        "op": 3,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          6,
+          8,
+          6
+        ],
+        "cycles": 288
+      },
+      {
+        "case": 5,
+        "op": 1,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          6,
+          8,
+          3
+        ],
+        "cycles": 144
+      },
+      {
+        "case": 6,
+        "op": 1,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          3,
+          4,
+          3
+        ],
+        "cycles": 36
+      },
+      {
+        "case": 7,
+        "op": 0,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          6,
+          8,
+          3
+        ],
+        "cycles": 144
+      },
+      {
+        "case": 8,
+        "op": 0,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          3,
+          4,
+          3
+        ],
+        "cycles": 36
+      },
+      {
+        "case": 9,
+        "op": 6,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          2,
+          2,
+          4
+        ],
+        "cycles": 16
+      },
+      {
+        "case": 10,
+        "op": 5,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          8,
+          8,
+          1
+        ],
+        "cycles": 64
+      },
+      {
+        "case": 11,
+        "op": 4,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          4,
+          4,
+          4
+        ],
+        "cycles": 64
+      },
+      {
+        "case": 12,
+        "op": 2,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          4,
+          4,
+          1
+        ],
+        "cycles": 16
+      },
+      {
+        "case": 13,
+        "op": 3,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          4,
+          4,
+          2
+        ],
+        "cycles": 32
+      },
+      {
+        "case": 14,
+        "op": 1,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          4,
+          4,
+          3
+        ],
+        "cycles": 48
+      },
+      {
+        "case": 15,
+        "op": 1,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          2,
+          2,
+          3
+        ],
+        "cycles": 12
+      },
+      {
+        "case": 16,
+        "op": 0,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          4,
+          4,
+          3
+        ],
+        "cycles": 48
+      },
+      {
+        "case": 17,
+        "op": 0,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          2,
+          2,
+          3
+        ],
+        "cycles": 12
+      },
+      {
+        "case": 18,
+        "op": 6,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          4,
+          3,
+          16
+        ],
+        "cycles": 192
+      },
+      {
+        "case": 19,
+        "op": 5,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          16,
+          12,
+          4
+        ],
+        "cycles": 768
+      },
+      {
+        "case": 20,
+        "op": 4,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          8,
+          6,
+          16
+        ],
+        "cycles": 768
+      },
+      {
+        "case": 21,
+        "op": 2,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          8,
+          6,
+          4
+        ],
+        "cycles": 192
+      },
+      {
+        "case": 22,
+        "op": 3,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          8,
+          6,
+          8
+        ],
+        "cycles": 384
+      },
+      {
+        "case": 23,
+        "op": 1,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          8,
+          6,
+          3
+        ],
+        "cycles": 144
+      },
+      {
+        "case": 24,
+        "op": 1,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          4,
+          3,
+          3
+        ],
+        "cycles": 36
+      },
+      {
+        "case": 25,
+        "op": 0,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          8,
+          6,
+          3
+        ],
+        "cycles": 144
+      },
+      {
+        "case": 26,
+        "op": 0,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          4,
+          3,
+          3
+        ],
+        "cycles": 36
+      }
+    ],
+    "tests": {
+      "tb_dmp": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_dmp_snapshot/xsim_script.tcl\n# xsim {tb_dmp_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS DMP 544288 vectors\n$finish called at time : 6350066 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dmp.sv\" Line 18\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:16 2026...\n"
+      },
+      "tb_buffer": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_buffer_snapshot/xsim_script.tcl\n# xsim {tb_buffer_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS buffer reset + stalls sent=160 received=160 cycles=290\n$finish called at time : 3155 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/testbench/unit/tb_buffer.sv\" Line 27\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:21 2026...\n"
+      },
+      "tb_npu": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_npu_snapshot/xsim_script.tcl\n# xsim {tb_npu_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS NPU 27 operator cases + chained integration\n$finish called at time : 57816 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_npu.sv\" Line 750\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:27 2026...\n"
+      },
+      "tb_dot3": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_dot3_snapshot/xsim_script.tcl\n# xsim {tb_dot3_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS Conv3x3 DMP tile 100 frames\n$finish called at time : 1216 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot3.sv\" Line 19\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:41 2026...\n"
+      },
+      "tb_dot1": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_dot1_snapshot/xsim_script.tcl\n# xsim {tb_dot1_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS Conv1x1 DMP tile 100 frames\n$finish called at time : 1216 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot1.sv\" Line 19\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:47 2026...\n"
+      },
+      "tb_stream": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_stream_snapshot/xsim_script.tcl\n# xsim {tb_stream_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS buffer-to-DMP integrated stream 256 vectors\n$finish called at time : 6136 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_stream.sv\" Line 18\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:53 2026...\n"
+      },
+      "tb_mqda0": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_mqda0_snapshot/xsim_script.tcl\n# xsim {tb_mqda0_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS MQDA CAT=0 1024 x16 lanes\n$finish called at time : 19505 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda0.sv\" Line 18\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:58 2026...\n"
+      },
+      "tb_mqda1": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_mqda1_snapshot/xsim_script.tcl\n# xsim {tb_mqda1_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS MQDA CAT=1 1024 x16 lanes\n$finish called at time : 19505 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda1.sv\" Line 18\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:11:03 2026...\n"
+      }
+    }
+  },
+  "synthesis": {
+    "result_kind": "MEASURED",
+    "part": "xc7z020clg484-1",
+    "scope": "Vivado synthesis only, not placement or hardware",
+    "dsp48e1": 1
+  },
+  "paper_target_failure": "xc7z100ffg900-2: Common 17-345 / 17-348 license unavailable",
+  "cuda_available_now": true,
+  "gpu_now": "NVIDIA GeForce RTX 3060",
+  "nvidia_smi": "Sun Oct 11 19:21:38 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.62                 KMD Version: 610.62        CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 3060      WDDM  |   00000000:01:00.0  On |                  N/A |\n| 64%   42C    P0             42W /  170W |    2022MiB /  12288MiB |      3%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A            6632    C+G   ...ffice6\\promecefpluginhost.exe      N/A      |\n|    0   N/A  N/A            7880    C+G   ...t\\Edge\\Application\\msedge.exe      N/A      |\n|    0   N/A  N/A            9308    C+G   ...ms\\Zalo\\Zalo-26.9.10\\Zalo.exe      N/A      |\n|    0   N/A  N/A            9720    C+G   ...lpaper_engine\\wallpaper64.exe      N/A      |\n|    0   N/A  N/A           10504    C+G   C:\\Windows\\explorer.exe               N/A      |\n|    0   N/A  N/A           11044    C+G   ...2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A           11788    C+G   ..._cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A           11816    C+G   ...y\\StartMenuExperienceHost.exe      N/A      |\n|    0   N/A  N/A           13276    C+G   ...cord\\app-1.0.9261\\Discord.exe      N/A      |\n|    0   N/A  N/A           13796    C+G   ....0.4258.62\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           14676    C+G   ...em_tray\\lghub_system_tray.exe      N/A      |\n|    0   N/A  N/A           14812    C+G   ...indows\\System32\\ShellHost.exe      N/A      |\n|    0   N/A  N/A           15332    C+G   ...26wp6bftszj\\TranslucentTB.exe      N/A      |\n|    0   N/A  N/A           16132    C+G   ...5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A           16420    C+G   ...SnippingTool\\SnippingTool.exe      N/A      |\n|    0   N/A  N/A           17196    C+G   ...\\plugins\\capture\\ZaloCall.exe      N/A      |\n|    0   N/A  N/A           17964    C+G   ...t\\Edge\\Application\\msedge.exe      N/A      |\n|    0   N/A  N/A           18236    C+G   ...iles\\Riot Vanguard\\vgtray.exe      N/A      |\n|    0   N/A  N/A           18580    C+G   ...xyewy\\ShellExperienceHost.exe      N/A      |\n|    0   N/A  N/A           19844    C+G   ...em32\\ApplicationFrameHost.exe      N/A      |\n|    0   N/A  N/A           19884    C+G   ...2p2nqsd0c76g0\\app\\ChatGPT.exe      N/A      |\n|    0   N/A  N/A           21512    C+G   ...2p2nqsd0c76g0\\app\\ChatGPT.exe      N/A      |\n|    0   N/A  N/A           21640    C+G   ...\\codex-computer-use-swift.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+  "vivado_version": "Vivado v2020.2 (64-bit)\nSW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\nIP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\nCopyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n",
+  "runner_receipt": {
+    "command": [
+      "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
+      "-B",
+      "C:\\Users\\azzmi\\FPGA-CNN-Temp\\windows_runner\\runner.py"
+    ],
+    "started_utc": "2026-10-11T12:21:39.045791+00:00",
+    "ended_utc": "2026-10-11T12:21:42.613714+00:00",
+    "actual_process_returncode": 0,
+    "log": {
+      "path": "reports/audit_evidence/runner_audit.log",
+      "sha256": "05a9abd1cd06c19a5bdb7e36c689652339b2721b64f3d36e3b32c4fb582f52c7"
+    },
+    "scope": "normal cached runner; not a forced complete rerun"
+  },
+  "junit_after": {
+    "suite_counter": 26,
+    "testcase_elements": 24,
+    "extra_subtest_events": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "tests.python.test_phase_a.TraceabilityTests.test_duplicate_ids_rejected",
+      "tests.python.test_phase_a.TraceabilityTests.test_future_module_cannot_claim_a_pass",
+      "tests.python.test_phase_a.TraceabilityTests.test_implemented_cannot_claim_missing_evidence",
+      "tests.python.test_phase_a.TraceabilityTests.test_invalid_phase_type_rejected",
+      "tests.python.test_phase_a.TraceabilityTests.test_missing_implementation_rejected",
+      "tests.python.test_phase_a.TraceabilityTests.test_missing_phase_rejected",
+      "tests.python.test_phase_a.TraceabilityTests.test_paper_values_cannot_be_relabelled_as_measurements",
+      "tests.python.test_phase_a.TraceabilityTests.test_path_escape_rejected",
+      "tests.python.test_phase_a.TraceabilityTests.test_real_trace_and_metrics",
+      "tests.python.test_phase_a.ManifestTests.test_file_hash_without_disclosing_content",
+      "tests.python.test_phase_a.ManifestTests.test_missing_input_fails",
+      "tests.python.test_reference.test_quant_boundaries_and_rounding",
+      "tests.python.test_reference.test_mqda_random_and_saturation",
+      "tests.python.test_reference.test_q16_negative_ties",
+      "tests.python.test_reference.test_dmp_all_weights_and_all_activation_codes",
+      "tests.python.test_reference.test_conv_against_torch[1-1-0]",
+      "tests.python.test_reference.test_conv_against_torch[3-1-1]",
+      "tests.python.test_reference.test_conv_against_torch[3-2-1]",
+      "tests.python.test_reference.test_spatial_ops_against_torch_and_focus_order",
+      "tests.python.test_reference.test_bank_ownership_and_overlap",
+      "tests.python.test_reference.test_instruction_memory_integration",
+      "tests.python.test_runner.test_corrupt_and_missing_artifact_cannot_skip",
+      "tests.python.test_runner.test_signature_changes_with_source",
+      "tests.python.test_runner.test_failed_stage_is_recorded_and_can_recover"
+    ]
+  },
+  "stages_after": {
+    "python_tests": {
+      "status": "PASS",
+      "signature": "acc5a9d40d4546a1e7fb2c5cc523038bfd0385f0ac79df43732198e364c337c5",
+      "started": "2026-10-11T19:20:35.995453+07:00",
+      "command": [
+        "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "tests/python",
+        "-q",
+        "--junitxml=outputs/python_tests.xml"
+      ],
+      "artifacts": {
+        "outputs/python_tests.xml": "8871c90582aa71ee8087bc3cda815c45cc75417cfc043dc7d2e714e4ef9c85d9"
+      },
+      "ended": "2026-10-11T19:20:39.315978+07:00",
+      "log": "outputs\\logs\\python_tests_20261011_192035_996454.log"
+    },
+    "inputs": {
+      "status": "PASS",
+      "signature": "7327b7633741409880ede716b3c6e7a8d58e760ec7e5799e5a3daa1d21e84c3b",
+      "started": "2026-10-11T18:59:59.861780+07:00",
+      "command": [
+        "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "windows_runner.prepare_inputs"
+      ],
+      "artifacts": {
+        "outputs/inputs.json": "1a0ef74e3d9adb328a77dfc0d8d47b8919037e5c4431de6ee52e103a5ada7987"
+      },
+      "ended": "2026-10-11T19:00:00.072673+07:00",
+      "log": "outputs\\logs\\inputs_20261011_185959.log"
+    },
+    "rtl": {
+      "status": "PASS",
+      "signature": "3b0a9bed2855206bee11e0b2cb1f33f1552a6d24e3189b3c92f76c231654df37",
+      "started": "2026-10-11T19:10:09.412228+07:00",
+      "command": [
+        "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "windows_runner.rtl_verify"
+      ],
+      "artifacts": {
+        "outputs/rtl/results.json": "07eb29fd9d692d799caeb6ac9275ab3d13bfd69372e4538e47e5fc5493f31215",
+        "outputs/rtl/commands.log": "fcf13ae74899cbb42764624de177f640cf40842e10cb08cdbe7cbd325d3cfab3"
+      },
+      "ended": "2026-10-11T19:11:03.699542+07:00",
+      "log": "outputs\\logs\\rtl_20261011_191009.log"
+    },
+    "gpu_experiments": {
+      "status": "PASS",
+      "signature": "76b030c0e9c795b2eff24fe994958aa681244397c4ba05d2296aaff54f48c927",
+      "started": "2026-10-11T19:06:15.072453+07:00",
+      "command": [
+        "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "benchmarks.local_experiments"
+      ],
+      "artifacts": {
+        "outputs/experiments/results.json": "70405f827981c34a13e67e60740bf9a2bf4af1467009c9e78dab7c8faf2ce5c7",
+        "outputs/experiments/fp32_samples.csv": "3a614049f846d7cb97bbad3b0e5f70ae1af8b9dcf7f78f1036ba54da65fe9a96",
+        "outputs/experiments/layer_errors.csv": "afa916d8852680b5f3c5db88b3eeccfb658e5a8859d06f15f6546d9bcbdeed55",
+        "outputs/experiments/calibration.json": "19849a3cc6e9819c0b56d533271425a8670f0e4683738881094c87b7b1bc9cf6",
+        "outputs/experiments/quantized_weights.pt": "184afde33875203f26f09e2d2b96eb122cf813c1bd9c9f197b4a41b037dcbf20"
+      },
+      "ended": "2026-10-11T19:06:34.603518+07:00",
+      "log": "outputs\\logs\\gpu_experiments_20261011_190615.log"
+    },
+    "dmp_synthesis_z020": {
+      "status": "PASS",
+      "signature": "96506a204cf843b6bc2a453265381f717e72af1953c026504a204141880fb633",
+      "started": "2026-10-11T19:00:38.848060+07:00",
+      "command": [
+        "C:\\Xilinx\\Vivado\\2020.2\\bin\\vivado.bat",
+        "-mode",
+        "batch",
+        "-source",
+        "scripts/synth_dmp.tcl",
+        "-tclargs",
+        "xc7z020clg484-1",
+        "-log",
+        "outputs/rtl/synthesis_z020_runner.log",
+        "-journal",
+        "outputs/rtl/synthesis_z020_runner.jou"
+      ],
+      "artifacts": {
+        "outputs/rtl/dmp_synthesis.json": "1cff70f9ea511ad4773b0a93f886d4317968145d24dd38d89ea691d10af8da00",
+        "outputs/rtl/dmp_utilization.rpt": "7851af2b49441fe1ba68dab3b586f86b6cf5aa2c6b436c3467abe1d2fb89d959"
+      },
+      "ended": "2026-10-11T19:01:10.609737+07:00",
+      "log": "outputs\\logs\\dmp_synthesis_z020_20261011_190038.log"
+    },
+    "report": {
+      "status": "PASS",
+      "signature": "effe2cfbb76801736c47fa013a93566aab1dbb7fdc561b1a8149d58aa522c1ff",
+      "started": "2026-10-11T19:21:41.281762+07:00",
+      "command": [
+        "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "benchmarks.summarize"
+      ],
+      "artifacts": {
+        "reports/LOCAL_REPRODUCTION_VI.md": "d32f9e78d3d19a343b208e50e4d7cdffdc133dbe2166fa2e2928bf523dc5580e",
+        "reports/local_results.json": "50af73ab9500de24ae88ce6db5deef412fee4a487492b8f64143d8e17e55fb8d",
+        "docs/PROGRESS.md": "6fcd3bd6a0018554c545f5f22c53b22544cb531442bc0012e50380377e24ea28",
+        "docs/REPRODUCTION_MATRIX.md": "6eec8b9e4759f16f1e4f21effbc8fdb0e034262ce3dfadc322e2685b59bfd9bf"
+      },
+      "ended": "2026-10-11T19:21:42.293351+07:00",
+      "log": "outputs\\logs\\report_20261011_192141_282766.log"
+    }
+  }
+}

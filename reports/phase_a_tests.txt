@@ -1,0 +1,15 @@
+test_file_hash_without_disclosing_content (test_phase_a.ManifestTests.test_file_hash_without_disclosing_content) ... ok
+test_missing_input_fails (test_phase_a.ManifestTests.test_missing_input_fails) ... ok
+test_duplicate_ids_rejected (test_phase_a.TraceabilityTests.test_duplicate_ids_rejected) ... ok
+test_future_module_cannot_claim_a_pass (test_phase_a.TraceabilityTests.test_future_module_cannot_claim_a_pass) ... ok
+test_invalid_phase_type_rejected (test_phase_a.TraceabilityTests.test_invalid_phase_type_rejected) ... ok
+test_missing_implementation_rejected (test_phase_a.TraceabilityTests.test_missing_implementation_rejected) ... ok
+test_missing_phase_rejected (test_phase_a.TraceabilityTests.test_missing_phase_rejected) ... ok
+test_paper_values_cannot_be_relabelled_as_measurements (test_phase_a.TraceabilityTests.test_paper_values_cannot_be_relabelled_as_measurements) ... ok
+test_path_escape_rejected (test_phase_a.TraceabilityTests.test_path_escape_rejected) ... ok
+test_real_trace_and_metrics (test_phase_a.TraceabilityTests.test_real_trace_and_metrics) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.036s
+
+OK

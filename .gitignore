@@ -53,3 +53,12 @@ sim_build/
 .DS_Store
 .vscode/
 .idea/
+
+# Preserve the user's independent upstream checkout; record its commit in manifests.
+/models/yolov5/
+/tools/
+/.artifacts/
+*.pb
+
+# Retain the final audit's real command logs as reviewable evidence.
+!/reports/audit_evidence/*.log

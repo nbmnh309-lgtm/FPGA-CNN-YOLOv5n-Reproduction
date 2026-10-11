@@ -1,0 +1,1546 @@
+{
+  "scope": "Partial local method reproduction; physical system and original model not reproduced",
+  "environment": {
+    "date": "2026-10-11T19:21:40.868320+07:00",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
+    "torch": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "cuda_available": true,
+    "packages": {
+      "anyio": "4.15.1",
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.5.2",
+      "colorama": "0.4.6",
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "filelock": "3.32.3",
+      "fonttools": "4.66.1",
+      "fsspec": "2026.7.0",
+      "h11": "0.16.0",
+      "httpcore": "1.0.9",
+      "httpx": "0.28.1",
+      "idna": "3.20",
+      "iniconfig": "2.3.1",
+      "Jinja2": "3.1.6",
+      "kiwisolver": "1.5.1",
+      "MarkupSafe": "3.0.3",
+      "matplotlib": "3.11.2",
+      "mpmath": "1.3.0",
+      "networkx": "3.6.1",
+      "numpy": "2.5.2",
+      "nvidia-ml-py": "13.615.71",
+      "opencv-python": "5.0.0.93",
+      "packaging": "26.3",
+      "pandas": "3.0.6",
+      "pillow": "12.3.0",
+      "pip": "26.2.1",
+      "pluggy": "1.6.0",
+      "polars": "2.0.0",
+      "polars-runtime-32": "2.0.0",
+      "psutil": "7.2.2",
+      "Pygments": "2.21.0",
+      "pyparsing": "3.3.3",
+      "pytest": "9.1.1",
+      "python-dateutil": "2.9.0.post0",
+      "PyYAML": "6.0.3",
+      "requests": "2.34.2",
+      "scipy": "1.18.1",
+      "seaborn": "0.13.2",
+      "setuptools": "78.1.0",
+      "six": "1.17.0",
+      "sympy": "1.14.0",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "tqdm": "4.70.1",
+      "typing_extensions": "4.16.0",
+      "tzdata": "2026.5",
+      "ultralytics": "8.4.175",
+      "ultralytics-platform": "0.1.83",
+      "ultralytics-thop": "2.2.2",
+      "urllib3": "2.8.0"
+    },
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "vram_free_total": [
+      11799625728,
+      12884377600
+    ],
+    "git_head": "6b7e414faf6d17b3a19d9559be88539359e0229c",
+    "branch": "local/full-reproduction",
+    "nvidia_smi": "NVIDIA GeForce RTX 3060, 9999 MiB, 12288 MiB, 610.62"
+  },
+  "gpu": {
+    "result_kind": "MEASURED",
+    "device": "NVIDIA GeForce RTX 3060",
+    "torch": "2.11.0+cu128",
+    "checkpoint": {
+      "path": "C:\\Users\\azzmi\\FPGA-CNN-Temp\\yolov5n.pt",
+      "sha256": "4f180cf23ba0717ada0badd6c685026d73d48f184d00fc159c2641284b2ac0a3",
+      "bytes": 4062133
+    },
+    "dataset_archive": {
+      "path": "C:\\Users\\azzmi\\FPGA-CNN-Temp\\data\\downloads\\coco128.zip",
+      "sha256": "61e5e3028863d8ffc3b81d6a514603954889f0edd5e4b44c4ce60b2da99aeb8e",
+      "bytes": 6983030
+    },
+    "dataset": "COCO128 train2017 subset; sanity AP only, possible training overlap; not VOC2007",
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "warmup": 30,
+    "repeats_per_image": 3,
+    "image_count": 128,
+    "seed": 20261011,
+    "parameters_fused": 1867405,
+    "graph_mismatch": "Conv6x6 stem / SiLU / COCO80 vs paper Focus / ReLU / VOC20",
+    "timing_scope": "Wall clock with CUDA sync. Includes letterbox+H2D, model sigmoid/decode, GPU NMS + detections D2H. Excludes image disk I/O. Batch1. Sequential frames; no overlapping.",
+    "fp32": {
+      "preprocess_ms": {
+        "count": 384,
+        "mean_ms": 0.9457036459252777,
+        "median_ms": 0.8450000004813774,
+        "p95_ms": 1.4200449975760416,
+        "std_ms": 0.28305449122456017,
+        "fps_from_mean": 1057.4137091557882
+      },
+      "inference_ms": {
+        "count": 384,
+        "mean_ms": 5.617755468724302,
+        "median_ms": 5.474600000525243,
+        "p95_ms": 6.673309999496267,
+        "std_ms": 0.4964731557968308,
+        "fps_from_mean": 178.0070360070484
+      },
+      "nms_ms": {
+        "count": 384,
+        "mean_ms": 1.137684635362272,
+        "median_ms": 0.9809000021050451,
+        "p95_ms": 1.3554150003983518,
+        "std_ms": 2.247656845279094,
+        "fps_from_mean": 878.978206189425
+      },
+      "end_to_end_ms": {
+        "count": 384,
+        "mean_ms": 7.701143750011852,
+        "median_ms": 7.39025000075344,
+        "p95_ms": 9.088975001395738,
+        "std_ms": 2.338513837092437,
+        "fps_from_mean": 129.8508419607751
+      }
+    },
+    "accuracy": {
+      "fp32": {
+        "precision": 0.6471223179809045,
+        "recall": 0.46706450968754226,
+        "map50": 0.5461647051569388,
+        "map50_95": 0.34896253675021655,
+        "scope": "COCO128 sanity, not independent held-out VOC validation",
+        "result_kind": "MEASURED"
+      },
+      "mqda": {
+        "precision": 0.6389451740418818,
+        "recall": 0.4438139644727149,
+        "map50": 0.5257289664579589,
+        "map50_95": 0.3256615455671317,
+        "scope": "COCO128 sanity, not independent held-out VOC validation",
+        "result_kind": "SIMULATED"
+      },
+      "no_mqda": {
+        "precision": 0.0033583149439416946,
+        "recall": 0.08635950600621196,
+        "map50": 0.004829173495706609,
+        "map50_95": 0.00201509561219702,
+        "scope": "COCO128 sanity, not independent held-out VOC validation",
+        "result_kind": "SIMULATED"
+      }
+    },
+    "qdq_benchmark": {
+      "fp32": {
+        "count": 96,
+        "mean_ms": 5.8586677082151555,
+        "median_ms": 5.7793999985733535,
+        "p95_ms": 6.362449998050579,
+        "std_ms": 0.2877252437334603,
+        "fps_from_mean": 170.68727052018627
+      },
+      "mqda": {
+        "count": 96,
+        "mean_ms": 22.414255208180595,
+        "median_ms": 22.218249998331885,
+        "p95_ms": 23.679275000176858,
+        "std_ms": 0.6695597112187923,
+        "fps_from_mean": 44.614464799839844
+      },
+      "no_mqda": {
+        "count": 96,
+        "mean_ms": 22.08600625018183,
+        "median_ms": 21.522700000787154,
+        "p95_ms": 24.79325000058452,
+        "std_ms": 2.150923678812454,
+        "fps_from_mean": 45.27753857679757
+      }
+    },
+    "cpu_int8": [
+      {
+        "kernel": 3,
+        "backend": "onednn",
+        "shape": [
+          1,
+          16,
+          32,
+          32
+        ],
+        "cout": 8,
+        "mse": 7.305297003767919e-06,
+        "timings": {
+          "FP32": {
+            "count": 200,
+            "mean_ms": 0.03835800003798795,
+            "median_ms": 0.03730000025825575,
+            "p95_ms": 0.04350500021246262,
+            "std_ms": 0.0032522662936932635,
+            "fps_from_mean": 26070.18090123696
+          },
+          "INT8_onednn": {
+            "count": 200,
+            "mean_ms": 0.06601899984161719,
+            "median_ms": 0.06470000153058209,
+            "p95_ms": 0.07521500137954718,
+            "std_ms": 0.004650434258369455,
+            "fps_from_mean": 15147.154643345839
+          }
+        },
+        "result_kind": "MEASURED",
+        "scope": "isolated CPU Conv2d; excludes input quantization/output dequantization; not complete network"
+      },
+      {
+        "kernel": 1,
+        "backend": "onednn",
+        "shape": [
+          1,
+          16,
+          32,
+          32
+        ],
+        "cout": 16,
+        "mse": 9.259513717552181e-06,
+        "timings": {
+          "FP32": {
+            "count": 200,
+            "mean_ms": 0.017718499948387034,
+            "median_ms": 0.01669999983278103,
+            "p95_ms": 0.020200001017656177,
+            "std_ms": 0.005058597459281696,
+            "fps_from_mean": 56438.186241100666
+          },
+          "INT8_onednn": {
+            "count": 200,
+            "mean_ms": 0.06861149997348548,
+            "median_ms": 0.06314999882306438,
+            "p95_ms": 0.09783000168681606,
+            "std_ms": 0.02038885517625622,
+            "fps_from_mean": 14574.816180763346
+          }
+        },
+        "result_kind": "MEASURED",
+        "scope": "isolated CPU Conv2d; excludes input quantization/output dequantization; not complete network"
+      }
+    ],
+    "peak_cuda_allocated_bytes": 328249344
+  },
+  "rtl": {
+    "result_kind": "SIMULATED",
+    "simulator": "C:\\Xilinx\\Vivado\\2020.2\\bin",
+    "dmp_vectors": 544288,
+    "operator_cases": [
+      {
+        "case": 0,
+        "op": 6,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          3,
+          4,
+          12
+        ],
+        "cycles": 144
+      },
+      {
+        "case": 1,
+        "op": 5,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          12,
+          16,
+          3
+        ],
+        "cycles": 576
+      },
+      {
+        "case": 2,
+        "op": 4,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          6,
+          8,
+          12
+        ],
+        "cycles": 576
+      },
+      {
+        "case": 3,
+        "op": 2,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          6,
+          8,
+          3
+        ],
+        "cycles": 144
+      },
+      {
+        "case": 4,
+        "op": 3,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          6,
+          8,
+          6
+        ],
+        "cycles": 288
+      },
+      {
+        "case": 5,
+        "op": 1,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          6,
+          8,
+          3
+        ],
+        "cycles": 144
+      },
+      {
+        "case": 6,
+        "op": 1,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          3,
+          4,
+          3
+        ],
+        "cycles": 36
+      },
+      {
+        "case": 7,
+        "op": 0,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          6,
+          8,
+          3
+        ],
+        "cycles": 144
+      },
+      {
+        "case": 8,
+        "op": 0,
+        "input_shape": [
+          6,
+          8,
+          3
+        ],
+        "output_shape": [
+          3,
+          4,
+          3
+        ],
+        "cycles": 36
+      },
+      {
+        "case": 9,
+        "op": 6,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          2,
+          2,
+          4
+        ],
+        "cycles": 16
+      },
+      {
+        "case": 10,
+        "op": 5,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          8,
+          8,
+          1
+        ],
+        "cycles": 64
+      },
+      {
+        "case": 11,
+        "op": 4,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          4,
+          4,
+          4
+        ],
+        "cycles": 64
+      },
+      {
+        "case": 12,
+        "op": 2,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          4,
+          4,
+          1
+        ],
+        "cycles": 16
+      },
+      {
+        "case": 13,
+        "op": 3,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          4,
+          4,
+          2
+        ],
+        "cycles": 32
+      },
+      {
+        "case": 14,
+        "op": 1,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          4,
+          4,
+          3
+        ],
+        "cycles": 48
+      },
+      {
+        "case": 15,
+        "op": 1,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          2,
+          2,
+          3
+        ],
+        "cycles": 12
+      },
+      {
+        "case": 16,
+        "op": 0,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          4,
+          4,
+          3
+        ],
+        "cycles": 48
+      },
+      {
+        "case": 17,
+        "op": 0,
+        "input_shape": [
+          4,
+          4,
+          1
+        ],
+        "output_shape": [
+          2,
+          2,
+          3
+        ],
+        "cycles": 12
+      },
+      {
+        "case": 18,
+        "op": 6,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          4,
+          3,
+          16
+        ],
+        "cycles": 192
+      },
+      {
+        "case": 19,
+        "op": 5,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          16,
+          12,
+          4
+        ],
+        "cycles": 768
+      },
+      {
+        "case": 20,
+        "op": 4,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          8,
+          6,
+          16
+        ],
+        "cycles": 768
+      },
+      {
+        "case": 21,
+        "op": 2,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          8,
+          6,
+          4
+        ],
+        "cycles": 192
+      },
+      {
+        "case": 22,
+        "op": 3,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          8,
+          6,
+          8
+        ],
+        "cycles": 384
+      },
+      {
+        "case": 23,
+        "op": 1,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          8,
+          6,
+          3
+        ],
+        "cycles": 144
+      },
+      {
+        "case": 24,
+        "op": 1,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          4,
+          3,
+          3
+        ],
+        "cycles": 36
+      },
+      {
+        "case": 25,
+        "op": 0,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          8,
+          6,
+          3
+        ],
+        "cycles": 144
+      },
+      {
+        "case": 26,
+        "op": 0,
+        "input_shape": [
+          8,
+          6,
+          4
+        ],
+        "output_shape": [
+          4,
+          3,
+          3
+        ],
+        "cycles": 36
+      }
+    ],
+    "tests": {
+      "tb_dmp": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_dmp_snapshot/xsim_script.tcl\n# xsim {tb_dmp_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS DMP 544288 vectors\n$finish called at time : 6350066 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dmp.sv\" Line 18\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:16 2026...\n"
+      },
+      "tb_buffer": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_buffer_snapshot/xsim_script.tcl\n# xsim {tb_buffer_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS buffer reset + stalls sent=160 received=160 cycles=290\n$finish called at time : 3155 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/testbench/unit/tb_buffer.sv\" Line 27\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:21 2026...\n"
+      },
+      "tb_npu": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_npu_snapshot/xsim_script.tcl\n# xsim {tb_npu_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS NPU 27 operator cases + chained integration\n$finish called at time : 57816 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_npu.sv\" Line 750\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:27 2026...\n"
+      },
+      "tb_dot3": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_dot3_snapshot/xsim_script.tcl\n# xsim {tb_dot3_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS Conv3x3 DMP tile 100 frames\n$finish called at time : 1216 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot3.sv\" Line 19\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:41 2026...\n"
+      },
+      "tb_dot1": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_dot1_snapshot/xsim_script.tcl\n# xsim {tb_dot1_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS Conv1x1 DMP tile 100 frames\n$finish called at time : 1216 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot1.sv\" Line 19\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:47 2026...\n"
+      },
+      "tb_stream": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_stream_snapshot/xsim_script.tcl\n# xsim {tb_stream_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS buffer-to-DMP integrated stream 256 vectors\n$finish called at time : 6136 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_stream.sv\" Line 18\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:53 2026...\n"
+      },
+      "tb_mqda0": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_mqda0_snapshot/xsim_script.tcl\n# xsim {tb_mqda0_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS MQDA CAT=0 1024 x16 lanes\n$finish called at time : 19505 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda0.sv\" Line 18\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:58 2026...\n"
+      },
+      "tb_mqda1": {
+        "status": "PASS",
+        "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_mqda1_snapshot/xsim_script.tcl\n# xsim {tb_mqda1_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS MQDA CAT=1 1024 x16 lanes\n$finish called at time : 19505 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda1.sv\" Line 18\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:11:03 2026...\n"
+      }
+    }
+  },
+  "synthesis": {
+    "result_kind": "MEASURED",
+    "part": "xc7z020clg484-1",
+    "scope": "Vivado synthesis only, not placement or hardware",
+    "dsp48e1": 1
+  },
+  "python_tests": {
+    "tests": "26",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "testcase_elements": 24,
+    "additional_subtests": 2
+  },
+  "mqda_random": {
+    "result_kind": "SIMULATED",
+    "samples": 100000,
+    "seed": 42,
+    "domains": {
+      "A": [
+        0.013,
+        91
+      ],
+      "B": [
+        0.087,
+        137
+      ],
+      "out": [
+        0.09,
+        120
+      ]
+    },
+    "mqda_mse": 0.03297636985000001,
+    "naive_mse": 25.48108172245
+  },
+  "buffer": {
+    "ping_pong": {
+      "cycles": 410,
+      "events": [
+        {
+          "block": 0,
+          "bank": 0,
+          "read": [
+            0,
+            5
+          ],
+          "compute": [
+            5,
+            25
+          ],
+          "write": [
+            25,
+            30
+          ]
+        },
+        {
+          "block": 1,
+          "bank": 1,
+          "read": [
+            5,
+            10
+          ],
+          "compute": [
+            25,
+            45
+          ],
+          "write": [
+            45,
+            50
+          ]
+        },
+        {
+          "block": 2,
+          "bank": 0,
+          "read": [
+            30,
+            35
+          ],
+          "compute": [
+            45,
+            65
+          ],
+          "write": [
+            65,
+            70
+          ]
+        },
+        {
+          "block": 3,
+          "bank": 1,
+          "read": [
+            50,
+            55
+          ],
+          "compute": [
+            65,
+            85
+          ],
+          "write": [
+            85,
+            90
+          ]
+        },
+        {
+          "block": 4,
+          "bank": 0,
+          "read": [
+            70,
+            75
+          ],
+          "compute": [
+            85,
+            105
+          ],
+          "write": [
+            105,
+            110
+          ]
+        },
+        {
+          "block": 5,
+          "bank": 1,
+          "read": [
+            90,
+            95
+          ],
+          "compute": [
+            105,
+            125
+          ],
+          "write": [
+            125,
+            130
+          ]
+        },
+        {
+          "block": 6,
+          "bank": 0,
+          "read": [
+            110,
+            115
+          ],
+          "compute": [
+            125,
+            145
+          ],
+          "write": [
+            145,
+            150
+          ]
+        },
+        {
+          "block": 7,
+          "bank": 1,
+          "read": [
+            130,
+            135
+          ],
+          "compute": [
+            145,
+            165
+          ],
+          "write": [
+            165,
+            170
+          ]
+        },
+        {
+          "block": 8,
+          "bank": 0,
+          "read": [
+            150,
+            155
+          ],
+          "compute": [
+            165,
+            185
+          ],
+          "write": [
+            185,
+            190
+          ]
+        },
+        {
+          "block": 9,
+          "bank": 1,
+          "read": [
+            170,
+            175
+          ],
+          "compute": [
+            185,
+            205
+          ],
+          "write": [
+            205,
+            210
+          ]
+        },
+        {
+          "block": 10,
+          "bank": 0,
+          "read": [
+            190,
+            195
+          ],
+          "compute": [
+            205,
+            225
+          ],
+          "write": [
+            225,
+            230
+          ]
+        },
+        {
+          "block": 11,
+          "bank": 1,
+          "read": [
+            210,
+            215
+          ],
+          "compute": [
+            225,
+            245
+          ],
+          "write": [
+            245,
+            250
+          ]
+        },
+        {
+          "block": 12,
+          "bank": 0,
+          "read": [
+            230,
+            235
+          ],
+          "compute": [
+            245,
+            265
+          ],
+          "write": [
+            265,
+            270
+          ]
+        },
+        {
+          "block": 13,
+          "bank": 1,
+          "read": [
+            250,
+            255
+          ],
+          "compute": [
+            265,
+            285
+          ],
+          "write": [
+            285,
+            290
+          ]
+        },
+        {
+          "block": 14,
+          "bank": 0,
+          "read": [
+            270,
+            275
+          ],
+          "compute": [
+            285,
+            305
+          ],
+          "write": [
+            305,
+            310
+          ]
+        },
+        {
+          "block": 15,
+          "bank": 1,
+          "read": [
+            290,
+            295
+          ],
+          "compute": [
+            305,
+            325
+          ],
+          "write": [
+            325,
+            330
+          ]
+        },
+        {
+          "block": 16,
+          "bank": 0,
+          "read": [
+            310,
+            315
+          ],
+          "compute": [
+            325,
+            345
+          ],
+          "write": [
+            345,
+            350
+          ]
+        },
+        {
+          "block": 17,
+          "bank": 1,
+          "read": [
+            330,
+            335
+          ],
+          "compute": [
+            345,
+            365
+          ],
+          "write": [
+            365,
+            370
+          ]
+        },
+        {
+          "block": 18,
+          "bank": 0,
+          "read": [
+            350,
+            355
+          ],
+          "compute": [
+            365,
+            385
+          ],
+          "write": [
+            385,
+            390
+          ]
+        },
+        {
+          "block": 19,
+          "bank": 1,
+          "read": [
+            370,
+            375
+          ],
+          "compute": [
+            385,
+            405
+          ],
+          "write": [
+            405,
+            410
+          ]
+        }
+      ],
+      "result_kind": "SIMULATED"
+    },
+    "serialized": {
+      "cycles": 600,
+      "events": [
+        {
+          "block": 0,
+          "bank": 0,
+          "read": [
+            0,
+            5
+          ],
+          "compute": [
+            5,
+            25
+          ],
+          "write": [
+            25,
+            30
+          ]
+        },
+        {
+          "block": 1,
+          "bank": 1,
+          "read": [
+            30,
+            35
+          ],
+          "compute": [
+            35,
+            55
+          ],
+          "write": [
+            55,
+            60
+          ]
+        },
+        {
+          "block": 2,
+          "bank": 0,
+          "read": [
+            60,
+            65
+          ],
+          "compute": [
+            65,
+            85
+          ],
+          "write": [
+            85,
+            90
+          ]
+        },
+        {
+          "block": 3,
+          "bank": 1,
+          "read": [
+            90,
+            95
+          ],
+          "compute": [
+            95,
+            115
+          ],
+          "write": [
+            115,
+            120
+          ]
+        },
+        {
+          "block": 4,
+          "bank": 0,
+          "read": [
+            120,
+            125
+          ],
+          "compute": [
+            125,
+            145
+          ],
+          "write": [
+            145,
+            150
+          ]
+        },
+        {
+          "block": 5,
+          "bank": 1,
+          "read": [
+            150,
+            155
+          ],
+          "compute": [
+            155,
+            175
+          ],
+          "write": [
+            175,
+            180
+          ]
+        },
+        {
+          "block": 6,
+          "bank": 0,
+          "read": [
+            180,
+            185
+          ],
+          "compute": [
+            185,
+            205
+          ],
+          "write": [
+            205,
+            210
+          ]
+        },
+        {
+          "block": 7,
+          "bank": 1,
+          "read": [
+            210,
+            215
+          ],
+          "compute": [
+            215,
+            235
+          ],
+          "write": [
+            235,
+            240
+          ]
+        },
+        {
+          "block": 8,
+          "bank": 0,
+          "read": [
+            240,
+            245
+          ],
+          "compute": [
+            245,
+            265
+          ],
+          "write": [
+            265,
+            270
+          ]
+        },
+        {
+          "block": 9,
+          "bank": 1,
+          "read": [
+            270,
+            275
+          ],
+          "compute": [
+            275,
+            295
+          ],
+          "write": [
+            295,
+            300
+          ]
+        },
+        {
+          "block": 10,
+          "bank": 0,
+          "read": [
+            300,
+            305
+          ],
+          "compute": [
+            305,
+            325
+          ],
+          "write": [
+            325,
+            330
+          ]
+        },
+        {
+          "block": 11,
+          "bank": 1,
+          "read": [
+            330,
+            335
+          ],
+          "compute": [
+            335,
+            355
+          ],
+          "write": [
+            355,
+            360
+          ]
+        },
+        {
+          "block": 12,
+          "bank": 0,
+          "read": [
+            360,
+            365
+          ],
+          "compute": [
+            365,
+            385
+          ],
+          "write": [
+            385,
+            390
+          ]
+        },
+        {
+          "block": 13,
+          "bank": 1,
+          "read": [
+            390,
+            395
+          ],
+          "compute": [
+            395,
+            415
+          ],
+          "write": [
+            415,
+            420
+          ]
+        },
+        {
+          "block": 14,
+          "bank": 0,
+          "read": [
+            420,
+            425
+          ],
+          "compute": [
+            425,
+            445
+          ],
+          "write": [
+            445,
+            450
+          ]
+        },
+        {
+          "block": 15,
+          "bank": 1,
+          "read": [
+            450,
+            455
+          ],
+          "compute": [
+            455,
+            475
+          ],
+          "write": [
+            475,
+            480
+          ]
+        },
+        {
+          "block": 16,
+          "bank": 0,
+          "read": [
+            480,
+            485
+          ],
+          "compute": [
+            485,
+            505
+          ],
+          "write": [
+            505,
+            510
+          ]
+        },
+        {
+          "block": 17,
+          "bank": 1,
+          "read": [
+            510,
+            515
+          ],
+          "compute": [
+            515,
+            535
+          ],
+          "write": [
+            535,
+            540
+          ]
+        },
+        {
+          "block": 18,
+          "bank": 0,
+          "read": [
+            540,
+            545
+          ],
+          "compute": [
+            545,
+            565
+          ],
+          "write": [
+            565,
+            570
+          ]
+        },
+        {
+          "block": 19,
+          "bank": 1,
+          "read": [
+            570,
+            575
+          ],
+          "compute": [
+            575,
+            595
+          ],
+          "write": [
+            595,
+            600
+          ]
+        }
+      ],
+      "result_kind": "SIMULATED"
+    },
+    "scope": "SIMULATED assumed 20 blocks, read5/compute20/write5 cycles; not calibrated to FPGA"
+  },
+  "not_verified": [
+    "VOC2007 paper checkpoint/graph/AP",
+    "XC7Z100 synthesis license",
+    "Full parallel NPU 16Cin x8/16Cout RTL",
+    "MIG/XDMA/PCIe physical integration",
+    "FPGA placement/routing timing",
+    "FPGA board latency/resources/power",
+    "Full-network native INT8 performance"
+  ],
+  "paper_metrics": [
+    {
+      "metric": "map_fp32",
+      "value": "71.54",
+      "unit": "percent",
+      "source": "Table 3",
+      "result_kind": "paper_reported",
+      "notes": "AP definition unknown"
+    },
+    {
+      "metric": "map_int8_mqda",
+      "value": "68.79",
+      "unit": "percent",
+      "source": "Table 3",
+      "result_kind": "paper_reported",
+      "notes": "AP definition unknown"
+    },
+    {
+      "metric": "map_int8_no_mqda",
+      "value": "68.26",
+      "unit": "percent",
+      "source": "Table 3",
+      "result_kind": "paper_reported",
+      "notes": "AP definition unknown"
+    },
+    {
+      "metric": "npu_latency",
+      "value": "24.617",
+      "unit": "ms",
+      "source": "Tables 4–5",
+      "result_kind": "paper_reported",
+      "notes": "includes DMA and scheduling"
+    },
+    {
+      "metric": "host_postprocess",
+      "value": "12.069",
+      "unit": "ms",
+      "source": "Tables 4–5",
+      "result_kind": "paper_reported",
+      "notes": "host sigmoid/decode/NMS boundary"
+    },
+    {
+      "metric": "end_to_end",
+      "value": "36.686",
+      "unit": "ms",
+      "source": "Tables 4–5",
+      "result_kind": "paper_reported",
+      "notes": "single frame"
+    },
+    {
+      "metric": "end_to_end_fps",
+      "value": "27.2",
+      "unit": "FPS",
+      "source": "Table 4",
+      "result_kind": "paper_reported",
+      "notes": "no inter-frame overlap"
+    },
+    {
+      "metric": "npu_fps",
+      "value": "40.62",
+      "unit": "FPS",
+      "source": "Table 4",
+      "result_kind": "paper_reported",
+      "notes": "FPGA-only"
+    },
+    {
+      "metric": "throughput",
+      "value": "182.8",
+      "unit": "GOPS",
+      "source": "Table 4",
+      "result_kind": "paper_reported",
+      "notes": "operation convention unresolved"
+    },
+    {
+      "metric": "serialized_latency",
+      "value": "31.854",
+      "unit": "ms",
+      "source": "§4.3.2",
+      "result_kind": "paper_reported",
+      "notes": "FPGA-side baseline"
+    },
+    {
+      "metric": "serialized_throughput",
+      "value": "141.3",
+      "unit": "GOPS",
+      "source": "§4.3.2",
+      "result_kind": "paper_reported",
+      "notes": "denominator unresolved"
+    },
+    {
+      "metric": "power",
+      "value": "8.536",
+      "unit": "W",
+      "source": "§4.5",
+      "result_kind": "paper_reported",
+      "notes": "Vivado power estimate, not physical measurement"
+    },
+    {
+      "metric": "energy_efficiency",
+      "value": "21.42",
+      "unit": "GOPS/W",
+      "source": "§4.5",
+      "result_kind": "paper_reported",
+      "notes": "paper throughput / estimated power"
+    },
+    {
+      "metric": "lut",
+      "value": "128535",
+      "unit": "count",
+      "source": "Table 2",
+      "result_kind": "paper_reported",
+      "notes": "available 277400"
+    },
+    {
+      "metric": "lutram",
+      "value": "4812",
+      "unit": "count",
+      "source": "Table 2",
+      "result_kind": "paper_reported",
+      "notes": "available 108200"
+    },
+    {
+      "metric": "ff",
+      "value": "176588",
+      "unit": "count",
+      "source": "Table 2",
+      "result_kind": "paper_reported",
+      "notes": "available 554800"
+    },
+    {
+      "metric": "bram",
+      "value": "273.5",
+      "unit": "blocks",
+      "source": "Table 2",
+      "result_kind": "paper_reported",
+      "notes": "available 755"
+    },
+    {
+      "metric": "dsp",
+      "value": "752",
+      "unit": "count",
+      "source": "Table 2",
+      "result_kind": "paper_reported",
+      "notes": "available 2020"
+    }
+  ]
+}
