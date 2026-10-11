@@ -53,3 +53,9 @@ sim_build/
 .DS_Store
 .vscode/
 .idea/
+
+# Preserve the user's independent upstream checkout; record its commit in manifests.
+/models/yolov5/
+/tools/
+/.artifacts/
+*.pb
