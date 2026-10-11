@@ -1,0 +1,55 @@
+# Python và môi trường ảo
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Dataset, trọng số và kết quả sinh ra: giữ thư mục trong Git
+/data/*
+!/data/.gitkeep
+/weights/*
+!/weights/.gitkeep
+/outputs/*
+!/outputs/.gitkeep
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.safetensors
+
+# Build, waveform và file tạm mô phỏng FPGA
+build/
+dist/
+obj_dir/
+sim_build/
+*.vvp
+*.vcd
+*.fst
+*.wlf
+*.jou
+*.log
+.Xil/
+*.bit
+*.bin
+*.dcp
+*.runs/
+*.cache/
+*.sim/
+
+# Cấu hình riêng, bí mật và file tạm
+.env
+.env.*
+!.env.example
+*.tmp
+*.swp
+*~
+.DS_Store
+.vscode/
+.idea/
