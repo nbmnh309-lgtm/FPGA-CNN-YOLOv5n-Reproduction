@@ -85,7 +85,7 @@ RTL hai bank full-block, ready/valid, producer không ghi bank full, consumer kh
 
 Bảy opcode trong behavioral engine:Conv33 stride1/2 padding, Conv11, Add MQDA Q16, Cat align, SPPF, nearest×2, Focus. SPPF tái hiện pooling/concat; không bao gồm các Conv bao quanh block mạng. Dùng các receptive field1/5/9/13 tương đương ba maxpool5 nối tiếp với unsigned padding0. Focus thứ tự even/even, odd/even, even/odd, odd/odd; input Python RGB3, không dùng channel padding giả làm màu.
 
-Khối `rtl/common/conv_dot.sv` là **datapath arithmetic synthesizable**: Conv33 16Cin×8Cout×9 với576 DMP; Conv11 16Cin×16Cout với128 DMP, unsigned8 activation/signed8 weight, accumulator24bit. XSim100 frame random cho mỗi cấu hình, so oracle Python và valid latency3cycles. Khối nhận window/weight từ ngoài; chưa có line buffers/weight scheduler/partial-sum across-channel/requantization cho toàn mạng, chưa nối datapath này vào behavioral NPU. Cấu trúc synthesizable chưa được timing closure; cây cộng hiện là reduction trực tiếp, chưa cây cộng nhiều tầng của tác giả.
+Khối `rtl/common/conv_dot.sv` là **ứng viên datapath RTL chưa có bằng chứng tổng hợp**: Conv33 16Cin×8Cout×9 với576 DMP; Conv11 16Cin×16Cout với128 DMP, unsigned8 activation/signed8 weight, accumulator24bit. XSim100 frame (97 random và3 biên) cho mỗi cấu hình, so oracle Python và valid latency3cycles. Khối nhận window/weight từ ngoài; chưa có line buffers/weight scheduler/partial-sum across-channel/requantization cho toàn mạng, chưa nối datapath này vào behavioral NPU. Chưa chứng minh tổng hợp/timing closure; cây cộng hiện là reduction trực tiếp, chưa cây cộng nhiều tầng của tác giả.
 
 `rtl/mqda/align.sv` có16 lane Add/Cat affine Q16 thật với4 stage, output backpressure giữ toàn pipeline, ratios24bit. XSim1.024 beat×16 lane cho mỗi mode; config scale/zero thay đổi từng beat, số âm/saturation/boundary và stalled output được so Python. Latency4stage là reconstruction, khác12/11cycles trong bài; Cat xử lý align từng nguồn beat, ordering tensor do memory/controller chịu trách nhiệm.
 
@@ -97,7 +97,7 @@ Python instruction-memory engine kiểm địa chỉ source/destination và byte
 
 ## 12. Kết quả kiểm thử
 
-Pytest JUnit: 26 tests, failures=0, errors=0. Chỉ gọi PASS khi subprocess kết thúc thành công và có artifact. XSim DMP/buffer/NPU có PASS trong `outputs/rtl/results.json`; nguồn vector có seed cố định và script tái sinh. Giai đoạn A test từ Cloud được chạy lại trên Windows; log cloud cũ giữ tên phase_a, không coi là bằng chứng B–I.
+Pytest JUnit: suite counter=26, gồm 24 testcase độc lập và 2 subtest được pytest9 tính thêm; failures=0, errors=0. Không gọi đây là26 testcase độc lập. Chỉ gọi PASS khi subprocess kết thúc thành công và có artifact. Cả8 testbench XSim có PASS trong `outputs/rtl/results.json`; nguồn vector có seed cố định và script tái sinh. Giai đoạn A test từ Cloud được chạy lại trên Windows; log cloud cũ giữ tên phase_a, không coi là bằng chứng B–I.
 
 Đã gặp và sửa tích hợp upstream val: cần data dictionary+dataloader khi truyền model; Windows multiprocessing tên package `benchmarks` trùng upstream nên tạo package local và giữ thứ tự sys.path; backend INT8 Windows thực có `onednn` thay vì mặc định x86. Không sửa upstream checkout. Runner timeout hữu hạn, lưu FAIL và chạy nhiệm vụ độc lập, không tạo log giả.
 

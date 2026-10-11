@@ -1,7 +1,7 @@
 {
-  "scope": "Maximum feasible local method reproduction; physical system and original model not reproduced",
+  "scope": "Partial local method reproduction; physical system and original model not reproduced",
   "environment": {
-    "date": "2026-10-11T19:12:10.483103+07:00",
+    "date": "2026-10-11T19:21:40.868320+07:00",
     "platform": "Windows-11-10.0.26300-SP0",
     "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
     "executable": "C:\\Users\\azzmi\\FPGA-CNN-Temp\\.venv\\Scripts\\python.exe",
@@ -66,9 +66,9 @@
       11799625728,
       12884377600
     ],
-    "git_head": "09bbd430df59e305bfd6a61fe95626e35dd7f815",
+    "git_head": "6b7e414faf6d17b3a19d9559be88539359e0229c",
     "branch": "local/full-reproduction",
-    "nvidia_smi": "NVIDIA GeForce RTX 3060, 9904 MiB, 12288 MiB, 610.62"
+    "nvidia_smi": "NVIDIA GeForce RTX 3060, 9999 MiB, 12288 MiB, 610.62"
   },
   "gpu": {
     "result_kind": "MEASURED",
@@ -708,7 +708,9 @@
     "tests": "26",
     "failures": "0",
     "errors": "0",
-    "skipped": "0"
+    "skipped": "0",
+    "testcase_elements": 24,
+    "additional_subtests": 2
   },
   "mqda_random": {
     "result_kind": "SIMULATED",

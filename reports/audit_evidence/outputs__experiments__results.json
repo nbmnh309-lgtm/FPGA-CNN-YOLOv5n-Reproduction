@@ -1,0 +1,182 @@
+{
+  "result_kind": "MEASURED",
+  "device": "NVIDIA GeForce RTX 3060",
+  "torch": "2.11.0+cu128",
+  "checkpoint": {
+    "path": "C:\\Users\\azzmi\\FPGA-CNN-Temp\\yolov5n.pt",
+    "sha256": "4f180cf23ba0717ada0badd6c685026d73d48f184d00fc159c2641284b2ac0a3",
+    "bytes": 4062133
+  },
+  "dataset_archive": {
+    "path": "C:\\Users\\azzmi\\FPGA-CNN-Temp\\data\\downloads\\coco128.zip",
+    "sha256": "61e5e3028863d8ffc3b81d6a514603954889f0edd5e4b44c4ce60b2da99aeb8e",
+    "bytes": 6983030
+  },
+  "dataset": "COCO128 train2017 subset; sanity AP only, possible training overlap; not VOC2007",
+  "input": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "warmup": 30,
+  "repeats_per_image": 3,
+  "image_count": 128,
+  "seed": 20261011,
+  "parameters_fused": 1867405,
+  "graph_mismatch": "Conv6x6 stem / SiLU / COCO80 vs paper Focus / ReLU / VOC20",
+  "timing_scope": "Wall clock with CUDA sync. Includes letterbox+H2D, model sigmoid/decode, GPU NMS + detections D2H. Excludes image disk I/O. Batch1. Sequential frames; no overlapping.",
+  "fp32": {
+    "preprocess_ms": {
+      "count": 384,
+      "mean_ms": 0.9457036459252777,
+      "median_ms": 0.8450000004813774,
+      "p95_ms": 1.4200449975760416,
+      "std_ms": 0.28305449122456017,
+      "fps_from_mean": 1057.4137091557882
+    },
+    "inference_ms": {
+      "count": 384,
+      "mean_ms": 5.617755468724302,
+      "median_ms": 5.474600000525243,
+      "p95_ms": 6.673309999496267,
+      "std_ms": 0.4964731557968308,
+      "fps_from_mean": 178.0070360070484
+    },
+    "nms_ms": {
+      "count": 384,
+      "mean_ms": 1.137684635362272,
+      "median_ms": 0.9809000021050451,
+      "p95_ms": 1.3554150003983518,
+      "std_ms": 2.247656845279094,
+      "fps_from_mean": 878.978206189425
+    },
+    "end_to_end_ms": {
+      "count": 384,
+      "mean_ms": 7.701143750011852,
+      "median_ms": 7.39025000075344,
+      "p95_ms": 9.088975001395738,
+      "std_ms": 2.338513837092437,
+      "fps_from_mean": 129.8508419607751
+    }
+  },
+  "accuracy": {
+    "fp32": {
+      "precision": 0.6471223179809045,
+      "recall": 0.46706450968754226,
+      "map50": 0.5461647051569388,
+      "map50_95": 0.34896253675021655,
+      "scope": "COCO128 sanity, not independent held-out VOC validation",
+      "result_kind": "MEASURED"
+    },
+    "mqda": {
+      "precision": 0.6389451740418818,
+      "recall": 0.4438139644727149,
+      "map50": 0.5257289664579589,
+      "map50_95": 0.3256615455671317,
+      "scope": "COCO128 sanity, not independent held-out VOC validation",
+      "result_kind": "SIMULATED"
+    },
+    "no_mqda": {
+      "precision": 0.0033583149439416946,
+      "recall": 0.08635950600621196,
+      "map50": 0.004829173495706609,
+      "map50_95": 0.00201509561219702,
+      "scope": "COCO128 sanity, not independent held-out VOC validation",
+      "result_kind": "SIMULATED"
+    }
+  },
+  "qdq_benchmark": {
+    "fp32": {
+      "count": 96,
+      "mean_ms": 5.8586677082151555,
+      "median_ms": 5.7793999985733535,
+      "p95_ms": 6.362449998050579,
+      "std_ms": 0.2877252437334603,
+      "fps_from_mean": 170.68727052018627
+    },
+    "mqda": {
+      "count": 96,
+      "mean_ms": 22.414255208180595,
+      "median_ms": 22.218249998331885,
+      "p95_ms": 23.679275000176858,
+      "std_ms": 0.6695597112187923,
+      "fps_from_mean": 44.614464799839844
+    },
+    "no_mqda": {
+      "count": 96,
+      "mean_ms": 22.08600625018183,
+      "median_ms": 21.522700000787154,
+      "p95_ms": 24.79325000058452,
+      "std_ms": 2.150923678812454,
+      "fps_from_mean": 45.27753857679757
+    }
+  },
+  "cpu_int8": [
+    {
+      "kernel": 3,
+      "backend": "onednn",
+      "shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "cout": 8,
+      "mse": 7.305297003767919e-06,
+      "timings": {
+        "FP32": {
+          "count": 200,
+          "mean_ms": 0.03835800003798795,
+          "median_ms": 0.03730000025825575,
+          "p95_ms": 0.04350500021246262,
+          "std_ms": 0.0032522662936932635,
+          "fps_from_mean": 26070.18090123696
+        },
+        "INT8_onednn": {
+          "count": 200,
+          "mean_ms": 0.06601899984161719,
+          "median_ms": 0.06470000153058209,
+          "p95_ms": 0.07521500137954718,
+          "std_ms": 0.004650434258369455,
+          "fps_from_mean": 15147.154643345839
+        }
+      },
+      "result_kind": "MEASURED",
+      "scope": "isolated CPU Conv2d; excludes input quantization/output dequantization; not complete network"
+    },
+    {
+      "kernel": 1,
+      "backend": "onednn",
+      "shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "cout": 16,
+      "mse": 9.259513717552181e-06,
+      "timings": {
+        "FP32": {
+          "count": 200,
+          "mean_ms": 0.017718499948387034,
+          "median_ms": 0.01669999983278103,
+          "p95_ms": 0.020200001017656177,
+          "std_ms": 0.005058597459281696,
+          "fps_from_mean": 56438.186241100666
+        },
+        "INT8_onednn": {
+          "count": 200,
+          "mean_ms": 0.06861149997348548,
+          "median_ms": 0.06314999882306438,
+          "p95_ms": 0.09783000168681606,
+          "std_ms": 0.02038885517625622,
+          "fps_from_mean": 14574.816180763346
+        }
+      },
+      "result_kind": "MEASURED",
+      "scope": "isolated CPU Conv2d; excludes input quantization/output dequantization; not complete network"
+    }
+  ],
+  "peak_cuda_allocated_bytes": 328249344
+}

@@ -1,0 +1,446 @@
+{
+  "result_kind": "SIMULATED",
+  "simulator": "C:\\Xilinx\\Vivado\\2020.2\\bin",
+  "dmp_vectors": 544288,
+  "operator_cases": [
+    {
+      "case": 0,
+      "op": 6,
+      "input_shape": [
+        6,
+        8,
+        3
+      ],
+      "output_shape": [
+        3,
+        4,
+        12
+      ],
+      "cycles": 144
+    },
+    {
+      "case": 1,
+      "op": 5,
+      "input_shape": [
+        6,
+        8,
+        3
+      ],
+      "output_shape": [
+        12,
+        16,
+        3
+      ],
+      "cycles": 576
+    },
+    {
+      "case": 2,
+      "op": 4,
+      "input_shape": [
+        6,
+        8,
+        3
+      ],
+      "output_shape": [
+        6,
+        8,
+        12
+      ],
+      "cycles": 576
+    },
+    {
+      "case": 3,
+      "op": 2,
+      "input_shape": [
+        6,
+        8,
+        3
+      ],
+      "output_shape": [
+        6,
+        8,
+        3
+      ],
+      "cycles": 144
+    },
+    {
+      "case": 4,
+      "op": 3,
+      "input_shape": [
+        6,
+        8,
+        3
+      ],
+      "output_shape": [
+        6,
+        8,
+        6
+      ],
+      "cycles": 288
+    },
+    {
+      "case": 5,
+      "op": 1,
+      "input_shape": [
+        6,
+        8,
+        3
+      ],
+      "output_shape": [
+        6,
+        8,
+        3
+      ],
+      "cycles": 144
+    },
+    {
+      "case": 6,
+      "op": 1,
+      "input_shape": [
+        6,
+        8,
+        3
+      ],
+      "output_shape": [
+        3,
+        4,
+        3
+      ],
+      "cycles": 36
+    },
+    {
+      "case": 7,
+      "op": 0,
+      "input_shape": [
+        6,
+        8,
+        3
+      ],
+      "output_shape": [
+        6,
+        8,
+        3
+      ],
+      "cycles": 144
+    },
+    {
+      "case": 8,
+      "op": 0,
+      "input_shape": [
+        6,
+        8,
+        3
+      ],
+      "output_shape": [
+        3,
+        4,
+        3
+      ],
+      "cycles": 36
+    },
+    {
+      "case": 9,
+      "op": 6,
+      "input_shape": [
+        4,
+        4,
+        1
+      ],
+      "output_shape": [
+        2,
+        2,
+        4
+      ],
+      "cycles": 16
+    },
+    {
+      "case": 10,
+      "op": 5,
+      "input_shape": [
+        4,
+        4,
+        1
+      ],
+      "output_shape": [
+        8,
+        8,
+        1
+      ],
+      "cycles": 64
+    },
+    {
+      "case": 11,
+      "op": 4,
+      "input_shape": [
+        4,
+        4,
+        1
+      ],
+      "output_shape": [
+        4,
+        4,
+        4
+      ],
+      "cycles": 64
+    },
+    {
+      "case": 12,
+      "op": 2,
+      "input_shape": [
+        4,
+        4,
+        1
+      ],
+      "output_shape": [
+        4,
+        4,
+        1
+      ],
+      "cycles": 16
+    },
+    {
+      "case": 13,
+      "op": 3,
+      "input_shape": [
+        4,
+        4,
+        1
+      ],
+      "output_shape": [
+        4,
+        4,
+        2
+      ],
+      "cycles": 32
+    },
+    {
+      "case": 14,
+      "op": 1,
+      "input_shape": [
+        4,
+        4,
+        1
+      ],
+      "output_shape": [
+        4,
+        4,
+        3
+      ],
+      "cycles": 48
+    },
+    {
+      "case": 15,
+      "op": 1,
+      "input_shape": [
+        4,
+        4,
+        1
+      ],
+      "output_shape": [
+        2,
+        2,
+        3
+      ],
+      "cycles": 12
+    },
+    {
+      "case": 16,
+      "op": 0,
+      "input_shape": [
+        4,
+        4,
+        1
+      ],
+      "output_shape": [
+        4,
+        4,
+        3
+      ],
+      "cycles": 48
+    },
+    {
+      "case": 17,
+      "op": 0,
+      "input_shape": [
+        4,
+        4,
+        1
+      ],
+      "output_shape": [
+        2,
+        2,
+        3
+      ],
+      "cycles": 12
+    },
+    {
+      "case": 18,
+      "op": 6,
+      "input_shape": [
+        8,
+        6,
+        4
+      ],
+      "output_shape": [
+        4,
+        3,
+        16
+      ],
+      "cycles": 192
+    },
+    {
+      "case": 19,
+      "op": 5,
+      "input_shape": [
+        8,
+        6,
+        4
+      ],
+      "output_shape": [
+        16,
+        12,
+        4
+      ],
+      "cycles": 768
+    },
+    {
+      "case": 20,
+      "op": 4,
+      "input_shape": [
+        8,
+        6,
+        4
+      ],
+      "output_shape": [
+        8,
+        6,
+        16
+      ],
+      "cycles": 768
+    },
+    {
+      "case": 21,
+      "op": 2,
+      "input_shape": [
+        8,
+        6,
+        4
+      ],
+      "output_shape": [
+        8,
+        6,
+        4
+      ],
+      "cycles": 192
+    },
+    {
+      "case": 22,
+      "op": 3,
+      "input_shape": [
+        8,
+        6,
+        4
+      ],
+      "output_shape": [
+        8,
+        6,
+        8
+      ],
+      "cycles": 384
+    },
+    {
+      "case": 23,
+      "op": 1,
+      "input_shape": [
+        8,
+        6,
+        4
+      ],
+      "output_shape": [
+        8,
+        6,
+        3
+      ],
+      "cycles": 144
+    },
+    {
+      "case": 24,
+      "op": 1,
+      "input_shape": [
+        8,
+        6,
+        4
+      ],
+      "output_shape": [
+        4,
+        3,
+        3
+      ],
+      "cycles": 36
+    },
+    {
+      "case": 25,
+      "op": 0,
+      "input_shape": [
+        8,
+        6,
+        4
+      ],
+      "output_shape": [
+        8,
+        6,
+        3
+      ],
+      "cycles": 144
+    },
+    {
+      "case": 26,
+      "op": 0,
+      "input_shape": [
+        8,
+        6,
+        4
+      ],
+      "output_shape": [
+        4,
+        3,
+        3
+      ],
+      "cycles": 36
+    }
+  ],
+  "tests": {
+    "tb_dmp": {
+      "status": "PASS",
+      "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_dmp_snapshot/xsim_script.tcl\n# xsim {tb_dmp_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS DMP 544288 vectors\n$finish called at time : 6350066 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dmp.sv\" Line 18\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:16 2026...\n"
+    },
+    "tb_buffer": {
+      "status": "PASS",
+      "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_buffer_snapshot/xsim_script.tcl\n# xsim {tb_buffer_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS buffer reset + stalls sent=160 received=160 cycles=290\n$finish called at time : 3155 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/testbench/unit/tb_buffer.sv\" Line 27\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:21 2026...\n"
+    },
+    "tb_npu": {
+      "status": "PASS",
+      "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_npu_snapshot/xsim_script.tcl\n# xsim {tb_npu_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS NPU 27 operator cases + chained integration\n$finish called at time : 57816 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_npu.sv\" Line 750\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:27 2026...\n"
+    },
+    "tb_dot3": {
+      "status": "PASS",
+      "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_dot3_snapshot/xsim_script.tcl\n# xsim {tb_dot3_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS Conv3x3 DMP tile 100 frames\n$finish called at time : 1216 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot3.sv\" Line 19\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:41 2026...\n"
+    },
+    "tb_dot1": {
+      "status": "PASS",
+      "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_dot1_snapshot/xsim_script.tcl\n# xsim {tb_dot1_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS Conv1x1 DMP tile 100 frames\n$finish called at time : 1216 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot1.sv\" Line 19\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:47 2026...\n"
+    },
+    "tb_stream": {
+      "status": "PASS",
+      "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_stream_snapshot/xsim_script.tcl\n# xsim {tb_stream_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS buffer-to-DMP integrated stream 256 vectors\n$finish called at time : 6136 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_stream.sv\" Line 18\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:53 2026...\n"
+    },
+    "tb_mqda0": {
+      "status": "PASS",
+      "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_mqda0_snapshot/xsim_script.tcl\n# xsim {tb_mqda0_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS MQDA CAT=0 1024 x16 lanes\n$finish called at time : 19505 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda0.sv\" Line 18\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:58 2026...\n"
+    },
+    "tb_mqda1": {
+      "status": "PASS",
+      "output": "\n****** xsim v2020.2 (64-bit)\n  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020\n  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020\n    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_mqda1_snapshot/xsim_script.tcl\n# xsim {tb_mqda1_snapshot} -autoloadwcfg -runall\nVivado Simulator 2020.2\nTime resolution is 1 ps\nrun -all\nPASS MQDA CAT=1 1024 x16 lanes\n$finish called at time : 19505 ns : File \"C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda1.sv\" Line 18\nexit\nINFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:11:03 2026...\n"
+    }
+  }
+}

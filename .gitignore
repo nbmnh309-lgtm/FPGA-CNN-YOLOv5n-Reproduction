@@ -59,3 +59,6 @@ sim_build/
 /tools/
 /.artifacts/
 *.pb
+
+# Retain the final audit's real command logs as reviewable evidence.
+!/reports/audit_evidence/*.log

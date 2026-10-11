@@ -3,7 +3,9 @@
 # Đây chưa phải bộ phụ thuộc đầy đủ của upstream YOLOv5.
 numpy>=1.26,<3
 PyYAML>=6.0,<7
-pytest>=8,<9
+# Pytest 9 reports unittest subtests separately in its terminal and suite count.
+# Local evidence was produced with pytest 9.1.1.
+pytest>=9,<10
 
 # Trì hoãn đến khi chọn commit YOLOv5 và môi trường CPU/CUDA:
 # torch, torchvision (chọn cặp phiên bản theo hướng dẫn chính thức PyTorch)

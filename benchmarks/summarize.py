@@ -27,7 +27,9 @@ def main():
     testfile=ROOT/'outputs/python_tests.xml';testinfo={}
     if testfile.is_file():
         tree=ET.parse(testfile);suite=tree.find('testsuite');testinfo={k:suite.attrib[k] for k in ['tests','failures','errors','skipped']}
-    summary={'scope':'Maximum feasible local method reproduction; physical system and original model not reproduced','environment':env,'gpu':gpu,'rtl':rtl,'synthesis':synth,'python_tests':testinfo,'mqda_random':ablation,'buffer':schedules,'not_verified':['VOC2007 paper checkpoint/graph/AP','XC7Z100 synthesis license','Full parallel NPU 16Cin x8/16Cout RTL','MIG/XDMA/PCIe physical integration','FPGA placement/routing timing','FPGA board latency/resources/power','Full-network native INT8 performance'],'paper_metrics':list(csv.DictReader((ROOT/'configs/reproduction/paper_metrics.csv').open(encoding='utf-8')))}
+        testinfo['testcase_elements']=len(suite.findall('testcase'))
+        testinfo['additional_subtests']=int(testinfo['tests'])-testinfo['testcase_elements']
+    summary={'scope':'Partial local method reproduction; physical system and original model not reproduced','environment':env,'gpu':gpu,'rtl':rtl,'synthesis':synth,'python_tests':testinfo,'mqda_random':ablation,'buffer':schedules,'not_verified':['VOC2007 paper checkpoint/graph/AP','XC7Z100 synthesis license','Full parallel NPU 16Cin x8/16Cout RTL','MIG/XDMA/PCIe physical integration','FPGA placement/routing timing','FPGA board latency/resources/power','Full-network native INT8 performance'],'paper_metrics':list(csv.DictReader((ROOT/'configs/reproduction/paper_metrics.csv').open(encoding='utf-8')))}
     (reports/'local_results.json').write_text(json.dumps(summary,indent=2,ensure_ascii=False),encoding='utf-8')
     for source in ['outputs/inputs.json','outputs/experiments/fp32_samples.csv','outputs/experiments/layer_errors.csv','outputs/rtl/dmp_utilization.rpt','outputs/rtl/dmp_synthesis.json','outputs/python_tests.xml']:
         path=ROOT/source
@@ -135,7 +137,7 @@ RTL hai bank full-block, ready/valid, producer không ghi bank full, consumer kh
 
 Bảy opcode trong behavioral engine:Conv33 stride1/2 padding, Conv11, Add MQDA Q16, Cat align, SPPF, nearest×2, Focus. SPPF tái hiện pooling/concat; không bao gồm các Conv bao quanh block mạng. Dùng các receptive field1/5/9/13 tương đương ba maxpool5 nối tiếp với unsigned padding0. Focus thứ tự even/even, odd/even, even/odd, odd/odd; input Python RGB3, không dùng channel padding giả làm màu.
 
-Khối `rtl/common/conv_dot.sv` là **datapath arithmetic synthesizable**: Conv33 16Cin×8Cout×9 với576 DMP; Conv11 16Cin×16Cout với128 DMP, unsigned8 activation/signed8 weight, accumulator24bit. XSim100 frame random cho mỗi cấu hình, so oracle Python và valid latency3cycles. Khối nhận window/weight từ ngoài; chưa có line buffers/weight scheduler/partial-sum across-channel/requantization cho toàn mạng, chưa nối datapath này vào behavioral NPU. Cấu trúc synthesizable chưa được timing closure; cây cộng hiện là reduction trực tiếp, chưa cây cộng nhiều tầng của tác giả.
+Khối `rtl/common/conv_dot.sv` là **ứng viên datapath RTL chưa có bằng chứng tổng hợp**: Conv33 16Cin×8Cout×9 với576 DMP; Conv11 16Cin×16Cout với128 DMP, unsigned8 activation/signed8 weight, accumulator24bit. XSim100 frame (97 random và3 biên) cho mỗi cấu hình, so oracle Python và valid latency3cycles. Khối nhận window/weight từ ngoài; chưa có line buffers/weight scheduler/partial-sum across-channel/requantization cho toàn mạng, chưa nối datapath này vào behavioral NPU. Chưa chứng minh tổng hợp/timing closure; cây cộng hiện là reduction trực tiếp, chưa cây cộng nhiều tầng của tác giả.
 
 `rtl/mqda/align.sv` có16 lane Add/Cat affine Q16 thật với4 stage, output backpressure giữ toàn pipeline, ratios24bit. XSim1.024 beat×16 lane cho mỗi mode; config scale/zero thay đổi từng beat, số âm/saturation/boundary và stalled output được so Python. Latency4stage là reconstruction, khác12/11cycles trong bài; Cat xử lý align từng nguồn beat, ordering tensor do memory/controller chịu trách nhiệm.
 
@@ -147,7 +149,7 @@ Python instruction-memory engine kiểm địa chỉ source/destination và byte
 
 ## 12. Kết quả kiểm thử
 
-Pytest JUnit: {ntests} tests, failures={npfail}, errors={nerr}. Chỉ gọi PASS khi subprocess kết thúc thành công và có artifact. XSim DMP/buffer/NPU có PASS trong `outputs/rtl/results.json`; nguồn vector có seed cố định và script tái sinh. Giai đoạn A test từ Cloud được chạy lại trên Windows; log cloud cũ giữ tên phase_a, không coi là bằng chứng B–I.
+Pytest JUnit: suite counter={ntests}, gồm {testinfo.get('testcase_elements','?')} testcase độc lập và {testinfo.get('additional_subtests','?')} subtest được pytest9 tính thêm; failures={npfail}, errors={nerr}. Không gọi đây là26 testcase độc lập. Chỉ gọi PASS khi subprocess kết thúc thành công và có artifact. Cả8 testbench XSim có PASS trong `outputs/rtl/results.json`; nguồn vector có seed cố định và script tái sinh. Giai đoạn A test từ Cloud được chạy lại trên Windows; log cloud cũ giữ tên phase_a, không coi là bằng chứng B–I.
 
 Đã gặp và sửa tích hợp upstream val: cần data dictionary+dataloader khi truyền model; Windows multiprocessing tên package `benchmarks` trùng upstream nên tạo package local và giữ thứ tự sys.path; backend INT8 Windows thực có `onednn` thay vì mặc định x86. Không sửa upstream checkout. Runner timeout hữu hạn, lưu FAIL và chạy nhiệm vụ độc lập, không tạo log giả.
 
@@ -207,8 +209,8 @@ Nguồn công cụ: [YOLOv5 upstream](https://github.com/ultralytics/yolov5), [P
 | D | reproduction/reference.py + QDQ fuse | Random/boundary Add/Cat và AP sanity ablation | Q-format/calibration tác giả |
 | E | rtl/dual_multiply_packing/dmp.sv | Python exhaustive, XSim vectors,1DSP XC7Z020 synth | XC7Z100/license/timing |
 | F | rtl/ping_pong_buffer/buffer.sv | Backpressure TB + bank cycle oracle | DMA thực/hardware latency |
-| G | rtl/top/npu.sv |27 operator cases SIMULATED | Parallel/synthesizable full datapath |
-| H | MemoryNPU + tb_npu generator | Python sequence,RTL Focus→Upsample | Full YOLO/MIG/XDMA/PCIe |
+| G | rtl/top/npu.sv + conv_dot.sv + mqda/align.sv |27 behavioral cases; 2 dot tiles×100 frame; Add/Cat×1024 beat SIMULATED | Full streaming datapath, synthesis/timing |
+| H | MemoryNPU + tb_npu/tb_stream generator | Python sequence,RTL Focus→Upsample; bank→DMP256 vectors | Full YOLO/MIG/XDMA/PCIe |
 | I | reports/LOCAL_REPRODUCTION_VI.md | JSON/CSV/plots với provenance | Physical FPS,power,LUT/BRAM,AP paper |
 
 G không được coi hoàn thành physical NPU. H chưa tái hiện whole network RTL. Native CPU INT8 là kernel nhỏ, QDQ toàn mạng vẫn FP32 arithmetic.
@@ -224,7 +226,7 @@ Nhánh `local/full-reproduction`; kế thừa87dda2c từ remote phase-a bằng 
 
 Đã chạy Python/XSim/CUDA và synthesis DMP surrogate XC7Z020; xem báo cáo tiếng Việt và ma trận. XC7Z100 thiếu license. Chưa hoàn thành original FPGA/VOC reproduction.
 
-Tiếp tục: `& .\\windows_runner\\run_all_windows.ps1`. Runner source/artifact hash kiểm checkpoint; không skip FAIL. Raw benchmark có cache riêng đã kiểm checkpoint/dataset/PyTorch.
+Tiếp tục: `& .\\windows_runner\\run_all_windows.ps1`. Runner source/artifact hash kiểm checkpoint; không skip FAIL. Cache FP32 nội bộ chỉ kiểm metadata và sự tồn tại CSV; khi thay đổi benchmark/dữ liệu, dùng `-Force`. Xem `reports/FINAL_VERIFICATION_AUDIT_VI.md` để biết giới hạn và bằng chứng kiểm toán.
 '''
     (ROOT/'docs/PROGRESS.md').write_text(progress,encoding='utf-8')
     print('Generated reports/LOCAL_REPRODUCTION_VI.md and verified artifact summary')

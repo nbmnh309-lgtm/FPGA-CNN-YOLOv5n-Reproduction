@@ -1,0 +1,1155 @@
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_dmp.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_dmp
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_dmp -s tb_dmp_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_dmp -s tb_dmp_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.dmp
+Compiling module work.tb_dmp
+Built simulation snapshot tb_dmp_snapshot
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/xsim.dir/tb_dmp_snapshot/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct 11 18:49:25 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_dmp_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_dmp_snapshot/xsim_script.tcl
+# xsim {tb_dmp_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS DMP 544288 vectors
+$finish called at time : 6350066 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dmp.sv" Line 15
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 18:49:32 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\ping_pong_buffer\buffer.sv C:\Users\azzmi\FPGA-CNN-Temp\testbench\unit\tb_buffer.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/ping_pong_buffer/buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module ping_pong_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/testbench/unit/tb_buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_buffer
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_buffer -s tb_buffer_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_buffer -s tb_buffer_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.ping_pong_buffer
+Compiling module work.tb_buffer
+Built simulation snapshot tb_buffer_snapshot
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/xsim.dir/tb_buffer_snapshot/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct 11 18:49:35 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_buffer_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_buffer_snapshot/xsim_script.tcl
+# xsim {tb_buffer_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS buffer sent=160 received=160 cycles=290
+$finish called at time : 2925 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/testbench/unit/tb_buffer.sv" Line 21
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 18:49:39 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\top\npu.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_npu.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/top/npu.sv" into library work
+INFO: [VRFC 10-311] analyzing module npu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_npu.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_npu
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_npu -s tb_npu_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_npu -s tb_npu_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.npu
+Compiling module work.tb_npu
+Built simulation snapshot tb_npu_snapshot
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/xsim.dir/tb_npu_snapshot/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct 11 18:49:44 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_npu_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_npu_snapshot/xsim_script.tcl
+# xsim {tb_npu_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS NPU 27 operator cases + chained integration
+$finish called at time : 54846 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_npu.sv" Line 683
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 18:49:48 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_dmp.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_dmp
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_dmp -s tb_dmp_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_dmp -s tb_dmp_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.dmp
+Compiling module work.tb_dmp
+Built simulation snapshot tb_dmp_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_dmp_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_dmp_snapshot/xsim_script.tcl
+# xsim {tb_dmp_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS DMP 544288 vectors
+$finish called at time : 6350066 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dmp.sv" Line 15
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:00:07 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\ping_pong_buffer\buffer.sv C:\Users\azzmi\FPGA-CNN-Temp\testbench\unit\tb_buffer.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/ping_pong_buffer/buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module ping_pong_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/testbench/unit/tb_buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_buffer
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_buffer -s tb_buffer_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_buffer -s tb_buffer_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.ping_pong_buffer
+Compiling module work.tb_buffer
+Built simulation snapshot tb_buffer_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_buffer_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_buffer_snapshot/xsim_script.tcl
+# xsim {tb_buffer_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS buffer sent=160 received=160 cycles=290
+$finish called at time : 2925 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/testbench/unit/tb_buffer.sv" Line 21
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:00:12 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\top\npu.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_npu.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/top/npu.sv" into library work
+INFO: [VRFC 10-311] analyzing module npu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_npu.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_npu
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_npu -s tb_npu_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_npu -s tb_npu_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.npu
+Compiling module work.tb_npu
+Built simulation snapshot tb_npu_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_npu_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_npu_snapshot/xsim_script.tcl
+# xsim {tb_npu_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS NPU 27 operator cases + chained integration
+$finish called at time : 54846 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_npu.sv" Line 683
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:00:19 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_dmp.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_dmp
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_dmp -s tb_dmp_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_dmp -s tb_dmp_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.dmp
+Compiling module work.tb_dmp
+Built simulation snapshot tb_dmp_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_dmp_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_dmp_snapshot/xsim_script.tcl
+# xsim {tb_dmp_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS DMP 544288 vectors
+$finish called at time : 6350066 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dmp.sv" Line 15
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:02:15 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\ping_pong_buffer\buffer.sv C:\Users\azzmi\FPGA-CNN-Temp\testbench\unit\tb_buffer.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/ping_pong_buffer/buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module ping_pong_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/testbench/unit/tb_buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_buffer
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_buffer -s tb_buffer_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_buffer -s tb_buffer_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.ping_pong_buffer
+Compiling module work.tb_buffer
+Built simulation snapshot tb_buffer_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_buffer_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_buffer_snapshot/xsim_script.tcl
+# xsim {tb_buffer_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS buffer sent=160 received=160 cycles=290
+$finish called at time : 2925 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/testbench/unit/tb_buffer.sv" Line 21
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:02:21 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\top\npu.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_npu.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/top/npu.sv" into library work
+INFO: [VRFC 10-311] analyzing module npu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_npu.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_npu
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_npu -s tb_npu_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_npu -s tb_npu_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.npu
+Compiling module work.tb_npu
+Built simulation snapshot tb_npu_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_npu_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_npu_snapshot/xsim_script.tcl
+# xsim {tb_npu_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS NPU 27 operator cases + chained integration
+$finish called at time : 54846 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_npu.sv" Line 683
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:02:27 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\common\conv_dot.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_dot3.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/common/conv_dot.sv" into library work
+INFO: [VRFC 10-311] analyzing module conv_dot
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot3.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_dot3
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_dot3 -s tb_dot3_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_dot3 -s tb_dot3_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.dmp
+Compiling module work.conv_dot_default
+Compiling module work.tb_dot3
+Built simulation snapshot tb_dot3_snapshot
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/xsim.dir/tb_dot3_snapshot/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct 11 19:02:38 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_dot3_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_dot3_snapshot/xsim_script.tcl
+# xsim {tb_dot3_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS Conv3x3 DMP tile 100 frames
+$finish called at time : 1216 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot3.sv" Line 19
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:02:42 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\common\conv_dot.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_dot1.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/common/conv_dot.sv" into library work
+INFO: [VRFC 10-311] analyzing module conv_dot
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot1.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_dot1
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_dot1 -s tb_dot1_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_dot1 -s tb_dot1_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.dmp
+Compiling module work.conv_dot(K=1,COUT=16)
+Compiling module work.tb_dot1
+Built simulation snapshot tb_dot1_snapshot
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/xsim.dir/tb_dot1_snapshot/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct 11 19:02:46 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_dot1_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_dot1_snapshot/xsim_script.tcl
+# xsim {tb_dot1_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS Conv1x1 DMP tile 100 frames
+$finish called at time : 1216 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot1.sv" Line 19
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:02:50 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\ping_pong_buffer\buffer.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_stream.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/ping_pong_buffer/buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module ping_pong_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_stream.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_stream
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_stream -s tb_stream_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_stream -s tb_stream_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.ping_pong_buffer(WIDTH=25)
+Compiling module work.dmp
+Compiling module work.tb_stream
+Built simulation snapshot tb_stream_snapshot
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/xsim.dir/tb_stream_snapshot/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct 11 19:02:53 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_stream_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_stream_snapshot/xsim_script.tcl
+# xsim {tb_stream_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS buffer-to-DMP integrated stream 256 vectors
+$finish called at time : 6136 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_stream.sv" Line 18
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:02:57 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_dmp.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_dmp
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_dmp -s tb_dmp_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_dmp -s tb_dmp_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.dmp
+Compiling module work.tb_dmp
+Built simulation snapshot tb_dmp_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_dmp_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_dmp_snapshot/xsim_script.tcl
+# xsim {tb_dmp_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS DMP 544288 vectors
+$finish called at time : 6350066 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dmp.sv" Line 15
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:05:23 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\ping_pong_buffer\buffer.sv C:\Users\azzmi\FPGA-CNN-Temp\testbench\unit\tb_buffer.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/ping_pong_buffer/buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module ping_pong_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/testbench/unit/tb_buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_buffer
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_buffer -s tb_buffer_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_buffer -s tb_buffer_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.ping_pong_buffer
+Compiling module work.tb_buffer
+Built simulation snapshot tb_buffer_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_buffer_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_buffer_snapshot/xsim_script.tcl
+# xsim {tb_buffer_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS buffer sent=160 received=160 cycles=290
+$finish called at time : 2925 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/testbench/unit/tb_buffer.sv" Line 21
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:05:28 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\top\npu.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_npu.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/top/npu.sv" into library work
+INFO: [VRFC 10-311] analyzing module npu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_npu.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_npu
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_npu -s tb_npu_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_npu -s tb_npu_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.npu
+Compiling module work.tb_npu
+Built simulation snapshot tb_npu_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_npu_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_npu_snapshot/xsim_script.tcl
+# xsim {tb_npu_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS NPU 27 operator cases + chained integration
+$finish called at time : 54846 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_npu.sv" Line 746
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:05:35 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\common\conv_dot.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_dot3.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/common/conv_dot.sv" into library work
+INFO: [VRFC 10-311] analyzing module conv_dot
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot3.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_dot3
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_dot3 -s tb_dot3_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_dot3 -s tb_dot3_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.dmp
+Compiling module work.conv_dot_default
+Compiling module work.tb_dot3
+Built simulation snapshot tb_dot3_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_dot3_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_dot3_snapshot/xsim_script.tcl
+# xsim {tb_dot3_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS Conv3x3 DMP tile 100 frames
+$finish called at time : 1216 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot3.sv" Line 19
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:05:48 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\common\conv_dot.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_dot1.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/common/conv_dot.sv" into library work
+INFO: [VRFC 10-311] analyzing module conv_dot
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot1.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_dot1
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_dot1 -s tb_dot1_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_dot1 -s tb_dot1_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.dmp
+Compiling module work.conv_dot(K=1,COUT=16)
+Compiling module work.tb_dot1
+Built simulation snapshot tb_dot1_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_dot1_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_dot1_snapshot/xsim_script.tcl
+# xsim {tb_dot1_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS Conv1x1 DMP tile 100 frames
+$finish called at time : 1216 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot1.sv" Line 19
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:05:55 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\ping_pong_buffer\buffer.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_stream.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/ping_pong_buffer/buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module ping_pong_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_stream.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_stream
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_stream -s tb_stream_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_stream -s tb_stream_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.ping_pong_buffer(WIDTH=25)
+Compiling module work.dmp
+Compiling module work.tb_stream
+Built simulation snapshot tb_stream_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_stream_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_stream_snapshot/xsim_script.tcl
+# xsim {tb_stream_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS buffer-to-DMP integrated stream 256 vectors
+$finish called at time : 6136 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_stream.sv" Line 18
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:06:00 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\mqda\align.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_mqda0.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/mqda/align.sv" into library work
+INFO: [VRFC 10-311] analyzing module mqda_align
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda0.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mqda0
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_mqda0 -s tb_mqda0_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_mqda0 -s tb_mqda0_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.mqda_align
+Compiling module work.tb_mqda0
+Built simulation snapshot tb_mqda0_snapshot
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/xsim.dir/tb_mqda0_snapshot/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct 11 19:06:03 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_mqda0_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mqda0_snapshot/xsim_script.tcl
+# xsim {tb_mqda0_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS MQDA CAT=0 1024 x16 lanes
+$finish called at time : 19505 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda0.sv" Line 18
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:06:07 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\mqda\align.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_mqda1.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/mqda/align.sv" into library work
+INFO: [VRFC 10-311] analyzing module mqda_align
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda1.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mqda1
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_mqda1 -s tb_mqda1_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_mqda1 -s tb_mqda1_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.mqda_align(CAT=1)
+Compiling module work.tb_mqda1
+Built simulation snapshot tb_mqda1_snapshot
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/xsim.dir/tb_mqda1_snapshot/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct 11 19:06:10 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_mqda1_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mqda1_snapshot/xsim_script.tcl
+# xsim {tb_mqda1_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS MQDA CAT=1 1024 x16 lanes
+$finish called at time : 19505 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda1.sv" Line 18
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:06:14 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_dmp.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_dmp
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_dmp -s tb_dmp_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_dmp -s tb_dmp_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.dmp
+Compiling module work.tb_dmp
+Built simulation snapshot tb_dmp_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_dmp_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_dmp_snapshot/xsim_script.tcl
+# xsim {tb_dmp_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS DMP 544288 vectors
+$finish called at time : 6350066 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dmp.sv" Line 18
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:16 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\ping_pong_buffer\buffer.sv C:\Users\azzmi\FPGA-CNN-Temp\testbench\unit\tb_buffer.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/ping_pong_buffer/buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module ping_pong_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/testbench/unit/tb_buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_buffer
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_buffer -s tb_buffer_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_buffer -s tb_buffer_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.ping_pong_buffer
+Compiling module work.tb_buffer
+Built simulation snapshot tb_buffer_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_buffer_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_buffer_snapshot/xsim_script.tcl
+# xsim {tb_buffer_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS buffer reset + stalls sent=160 received=160 cycles=290
+$finish called at time : 3155 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/testbench/unit/tb_buffer.sv" Line 27
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:21 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\top\npu.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_npu.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/top/npu.sv" into library work
+INFO: [VRFC 10-311] analyzing module npu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_npu.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_npu
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_npu -s tb_npu_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_npu -s tb_npu_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.npu
+Compiling module work.tb_npu
+Built simulation snapshot tb_npu_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_npu_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_npu_snapshot/xsim_script.tcl
+# xsim {tb_npu_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS NPU 27 operator cases + chained integration
+$finish called at time : 57816 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_npu.sv" Line 750
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:27 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\common\conv_dot.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_dot3.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/common/conv_dot.sv" into library work
+INFO: [VRFC 10-311] analyzing module conv_dot
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot3.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_dot3
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_dot3 -s tb_dot3_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_dot3 -s tb_dot3_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.dmp
+Compiling module work.conv_dot_default
+Compiling module work.tb_dot3
+Built simulation snapshot tb_dot3_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_dot3_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_dot3_snapshot/xsim_script.tcl
+# xsim {tb_dot3_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS Conv3x3 DMP tile 100 frames
+$finish called at time : 1216 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot3.sv" Line 19
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:41 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\common\conv_dot.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_dot1.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/common/conv_dot.sv" into library work
+INFO: [VRFC 10-311] analyzing module conv_dot
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot1.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_dot1
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_dot1 -s tb_dot1_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_dot1 -s tb_dot1_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.dmp
+Compiling module work.conv_dot(K=1,COUT=16)
+Compiling module work.tb_dot1
+Built simulation snapshot tb_dot1_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_dot1_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_dot1_snapshot/xsim_script.tcl
+# xsim {tb_dot1_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS Conv1x1 DMP tile 100 frames
+$finish called at time : 1216 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_dot1.sv" Line 19
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:47 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\dual_multiply_packing\dmp.sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\ping_pong_buffer\buffer.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_stream.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/dual_multiply_packing/dmp.sv" into library work
+INFO: [VRFC 10-311] analyzing module dmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/ping_pong_buffer/buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module ping_pong_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_stream.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_stream
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_stream -s tb_stream_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_stream -s tb_stream_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.ping_pong_buffer(WIDTH=25)
+Compiling module work.dmp
+Compiling module work.tb_stream
+Built simulation snapshot tb_stream_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_stream_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_stream_snapshot/xsim_script.tcl
+# xsim {tb_stream_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS buffer-to-DMP integrated stream 256 vectors
+$finish called at time : 6136 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_stream.sv" Line 18
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:53 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\mqda\align.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_mqda0.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/mqda/align.sv" into library work
+INFO: [VRFC 10-311] analyzing module mqda_align
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda0.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mqda0
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_mqda0 -s tb_mqda0_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_mqda0 -s tb_mqda0_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.mqda_align
+Compiling module work.tb_mqda0
+Built simulation snapshot tb_mqda0_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_mqda0_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mqda0_snapshot/xsim_script.tcl
+# xsim {tb_mqda0_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS MQDA CAT=0 1024 x16 lanes
+$finish called at time : 19505 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda0.sv" Line 18
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:10:58 2026...
+
+C:\Xilinx\Vivado\2020.2\bin\xvlog.bat -sv C:\Users\azzmi\FPGA-CNN-Temp\rtl\mqda\align.sv C:\Users\azzmi\FPGA-CNN-Temp\outputs\rtl\tb_mqda1.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/rtl/mqda/align.sv" into library work
+INFO: [VRFC 10-311] analyzing module mqda_align
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda1.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mqda1
+
+C:\Xilinx\Vivado\2020.2\bin\xelab.bat tb_mqda1 -s tb_mqda1_snapshot
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_mqda1 -s tb_mqda1_snapshot 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.mqda_align(CAT=1)
+Compiling module work.tb_mqda1
+Built simulation snapshot tb_mqda1_snapshot
+
+C:\Xilinx\Vivado\2020.2\bin\xsim.bat tb_mqda1_snapshot -runall
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mqda1_snapshot/xsim_script.tcl
+# xsim {tb_mqda1_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+PASS MQDA CAT=1 1024 x16 lanes
+$finish called at time : 19505 ns : File "C:/Users/azzmi/FPGA-CNN-Temp/outputs/rtl/tb_mqda1.sv" Line 18
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 19:11:03 2026...
+

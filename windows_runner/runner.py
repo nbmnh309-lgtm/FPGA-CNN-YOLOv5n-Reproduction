@@ -83,7 +83,7 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--force',action='store_true');p.add_argument('--skip-gpu',action='store_true');args=p.parse_args()
     env=environment()
     state=json.loads(STATE.read_text(encoding='utf-8')) if STATE.is_file() else {'schema_version':1,'stages':{}}
-    state.update(updated=stamp(),environment='outputs/environment.json',scope='Local maximum feasible method reproduction; physical FPGA/VOC paper replication incomplete')
+    state.update(updated=stamp(),environment='outputs/environment.json',scope='Partial local method reproduction; physical FPGA/VOC paper replication incomplete')
     py=[sys.executable,'-B'];ok=True
     tests=execute_stage(state,'python_tests',py+['-m','pytest','tests/python','-q','--junitxml=outputs/python_tests.xml'],[str(x.relative_to(ROOT)) for x in (ROOT/'tests/python').glob('*.py')]+['reproduction/reference.py','windows_runner/runner.py','scripts/validate_phase_a.py','scripts/collect_reproduction_manifest.py','configs/reproduction/traceability.json','configs/reproduction/paper_metrics.csv','pytest.ini'],['outputs/python_tests.xml'],force=args.force);ok&=tests
     inputs=execute_stage(state,'inputs',py+['-m','windows_runner.prepare_inputs'],['windows_runner/prepare_inputs.py','yolov5n.pt','models/yolov5/models/yolo.py','data/downloads/coco128.zip'],['outputs/inputs.json'],force=args.force);ok&=inputs
@@ -95,10 +95,12 @@ def main():
         gpu=execute_stage(state,'gpu_experiments',py+['-m','benchmarks.local_experiments']+(['--force'] if args.force else []),src,['outputs/experiments/results.json','outputs/experiments/fp32_samples.csv','outputs/experiments/layer_errors.csv','outputs/experiments/calibration.json','outputs/experiments/quantized_weights.pt'],force=args.force);ok&=gpu
     elif not args.skip_gpu:
         state['stages']['gpu_experiments']={'status':'NOT_VERIFIED','reason':'inputs or CUDA unavailable'};ok=False
-    # Synthesis is a separate optional milestone because XC7Z100 needs a license.
+    # The surrogate synthesis is required for an unqualified successful run.
     vivados=sorted(Path('C:/Xilinx/Vivado').glob('*/bin/vivado.bat'))
     if vivados:
         synth=execute_stage(state,'dmp_synthesis_z020',[str(vivados[-1]),'-mode','batch','-source','scripts/synth_dmp.tcl','-tclargs','xc7z020clg484-1','-log','outputs/rtl/synthesis_z020_runner.log','-journal','outputs/rtl/synthesis_z020_runner.jou'],['scripts/synth_dmp.tcl','rtl/dual_multiply_packing/dmp.sv'],['outputs/rtl/dmp_synthesis.json','outputs/rtl/dmp_utilization.rpt'],force=args.force);ok&=synth
+    else:
+        state['stages']['dmp_synthesis_z020']={'status':'NOT_VERIFIED','reason':'Vivado executable unavailable'};ok=False
     write_json(STATE,state)
     report=execute_stage(state,'report',py+['-m','benchmarks.summarize'],['benchmarks/summarize.py','outputs/experiment_status.json','outputs/experiments/results.json','outputs/rtl/results.json','outputs/rtl/dmp_synthesis.json'],['reports/LOCAL_REPRODUCTION_VI.md','reports/local_results.json','docs/PROGRESS.md','docs/REPRODUCTION_MATRIX.md'],force=True);ok&=report
     state['last_run']=stamp();state['last_exit_code']=0 if ok else 1;write_json(STATE,state)

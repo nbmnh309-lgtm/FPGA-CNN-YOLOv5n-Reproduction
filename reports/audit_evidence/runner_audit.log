@@ -1,0 +1,8 @@
+SKIP verified python_tests
+SKIP verified inputs
+SKIP verified rtl
+SKIP verified gpu_experiments
+SKIP verified dmp_synthesis_z020
+RUN report
+PASS report
+Checkpoint: C:\Users\azzmi\FPGA-CNN-Temp\outputs\experiment_status.json
