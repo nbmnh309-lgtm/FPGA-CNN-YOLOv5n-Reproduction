@@ -1,0 +1,9 @@
+{
+  "upstream_commit": "f9578796b8a64889aa9e66dc06914d19f40d338e",
+  "upstream_url": "https://github.com/ultralytics/yolov5",
+  "dataset_url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/coco128.zip",
+  "dataset_sha256": "61e5e3028863d8ffc3b81d6a514603954889f0edd5e4b44c4ce60b2da99aeb8e",
+  "checkpoint_sha256": "4f180cf23ba0717ada0badd6c685026d73d48f184d00fc159c2641284b2ac0a3",
+  "checkpoint_provenance": "Existing user checkpoint; hash recorded, authors VOC checkpoint unavailable",
+  "dataset_scope": "COCO128 sanity; not paper VOC2007"
+}

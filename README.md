@@ -2,7 +2,19 @@
 
 Dự án học và tái hiện từng bước bài báo **An Energy-Efficient FPGA-Based CNN Accelerator with Dual-Multiply Packing and Ping-Pong Buffering for Real-Time Object Detection**, Wenrui Wang và cộng sự, Electronics 2026, 15, 2442. DOI: https://doi.org/10.3390/electronics15112442
 
-## Trạng thái: Giai đoạn A — Phân tích và kế hoạch
+## Trạng thái local Windows — kiểm chứng phương pháp và mô phỏng
+
+Đã chạy CUDA FP32 trên 128 ảnh ×3, full-network QDQ/MQDA sanity COCO128, INT8 kernel CPU oneDNN, Python exhaustive DMP và 8 testbench XSim: DMP, buffer, 7 opcode behavioral, Conv33/Conv11 arithmetic tiles, MQDA Add/Cat 16 lane và buffer→DMP integration. DMP reconstruction được synth thành 1 DSP48E1 trên XC7Z020; XC7Z100 thiếu license. Chưa tái hiện VOC checkpoint hoặc hệ thống FPGA vật lý của tác giả.
+
+Chạy/tiếp tục ngay trên PC:
+
+```powershell
+& .\windows_runner\run_all_windows.ps1
+```
+
+Runner chỉ skip stage PASS khi source/artifact hash còn đúng, lưu trạng thái trong `outputs/experiment_status.json`. Xem [báo cáo tiếng Việt](reports/LOCAL_REPRODUCTION_VI.md), [ma trận bằng chứng](docs/REPRODUCTION_MATRIX.md) và [tiến độ](docs/PROGRESS.md). Commit chỉ cục bộ; không push hoặc PR. Upstream checkout/trọng số/dataset được giữ trong PC và gitignore.
+
+## Lịch sử Giai đoạn A — Phân tích và kế hoạch
 
 Giai đoạn 1 đã được lưu trên GitHub. Giai đoạn A bổ sung phân tích PDF, bảng truy vết và công cụ thu thập metadata; chưa triển khai B–I.
 
@@ -21,9 +33,9 @@ python3 scripts/validate_phase_a.py --output outputs/phase_a_validation.json
 
 Các phép kiểm tra này xác minh bảng truy vết, provenance và công cụ A, không xác minh CNN/RTL. Báo cáo môi trường Giai đoạn 1 là ảnh chụp **cloud** tại thời điểm đó; không mô tả môi trường CUDA Windows của người dùng.
 
-## Bộ khung Giai đoạn 1
+## Lịch sử bộ khung Giai đoạn 1
 
-Repository hiện có bộ khung và tài liệu; chưa có mô hình YOLOv5n, thuật toán lượng tử, RTL hoặc testbench hoạt động. Chưa tải dataset/trọng số, cài thư viện lớn, huấn luyện hay chạy mô phỏng. Các số liệu trong bài báo là mục tiêu tham khảo, chưa phải kết quả tái hiện.
+Ở Giai đoạn 1, repository chỉ có bộ khung và tài liệu. Trạng thái hiện tại và bằng chứng nằm trong báo cáo local ở đầu README. Các số liệu trong bài báo luôn là mục tiêu tham khảo, không phải kết quả tái hiện.
 
 ## Kiến trúc cần nghiên cứu
 

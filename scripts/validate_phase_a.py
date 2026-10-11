@@ -38,11 +38,11 @@ def validate_trace(document, root=ROOT):
         if not item.get('paper_source') or not item.get('requirement'):
             raise ValueError('Missing source/description')
         status = item.get('status')
-        if status not in {'planned', 'implemented'}:
+        if status not in {'planned', 'implemented', 'partial'}:
             raise ValueError('Unknown status')
         for field in ('code', 'test'):
             path = safe_path(root, item.get(field))
-            if status == 'implemented' and not path.is_file():
+            if status in {'implemented', 'partial'} and not path.is_file():
                 raise ValueError('Implemented artifact does not exist')
         if status == 'planned':
             if item.get('result') is not None or item.get('result_kind') is not None:
@@ -50,8 +50,8 @@ def validate_trace(document, root=ROOT):
         else:
             if item.get('result_kind') not in KINDS:
                 raise ValueError('Missing result provenance')
-            # The current run writes this report only after validation completes.
-            safe_path(root, item.get('result'))
+            if not safe_path(root, item.get('result')).is_file():
+                raise ValueError('Claimed evidence artifact does not exist')
     if phases != set('ABCDEFGHI'):
         raise ValueError('Trace must cover A through I')
     return len(entries)

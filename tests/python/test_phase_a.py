@@ -32,6 +32,11 @@ class TraceabilityTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             validator.validate_trace(self.trace)
 
+    def test_implemented_cannot_claim_missing_evidence(self):
+        self.trace['requirements'][0]['result'] = 'reports/nonexistent_evidence.json'
+        with self.assertRaises(ValueError):
+            validator.validate_trace(self.trace)
+
     def test_missing_implementation_rejected(self):
         self.trace['requirements'][0]['code'] = 'models/not_implemented.py'
         with self.assertRaises(ValueError):

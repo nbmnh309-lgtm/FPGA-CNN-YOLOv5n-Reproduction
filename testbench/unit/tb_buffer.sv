@@ -4,7 +4,13 @@ module tb_buffer;
  integer sent=0,received=0,tick=0,phase=0; logic stalled=0; logic [7:0] held;
  ping_pong_buffer #(.DEPTH(8)) dut(.*);
  always #5 clk=~clk;
- initial begin repeat(3) @(negedge clk); rst=0; end
+ initial begin
+  repeat(3) @(negedge clk); #1; rst=0;
+  // Abort a partial block, then verify a fresh complete stream.
+  repeat(19) @(negedge clk); #1; rst=1;in_valid=0;out_ready=0;
+  repeat(3) @(negedge clk); #1;
+  sent=0;received=0;tick=0;stalled=0;phase=1;rst=0;
+ end
  always @(negedge clk) if(!rst) begin
   in_valid=(tick%5!=0 && sent<160); in_data=sent%256;
   out_ready=(tick%7<4); tick=tick+1;
@@ -18,6 +24,6 @@ module tb_buffer;
    if(out_data!==(received%256)) $fatal(1,"FIFO mismatch at %0d",received);
    received=received+1;
   end
-  if(received==160) begin $display("PASS buffer sent=%0d received=%0d cycles=%0d",sent,received,tick); $finish; end
+  if(received==160 && phase==1) begin $display("PASS buffer reset + stalls sent=%0d received=%0d cycles=%0d",sent,received,tick); $finish; end
  end
 endmodule
